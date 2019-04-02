@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movie Max</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mmax.css">
+  <script src="mmax.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-forms">
+
+<!-- Header from mmax.js -->
+<div id="header"></div>
+
+<!-- Page form -->
+<div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+  <h2>Forgot Username/Password</h2>
+  <form action="#">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <div>
+  <input type="radio" name="creds" id="uname" value="uname" checked>
+  <label for="uname">Username</label>
+</div>
+<div>
+  <input type="radio" name="creds" id="pswd" value="pswd">
+  <label for="pswd">password</label>
+</div>
+    </div>
+    <div class="form-group form-check">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Default Footer with links from mmax.js-->
+<div id = "footer" class="row justify-content-*-center"></div>
+
+<script>
+document.getElementById("header").innerHTML = forms_header;
+document.getElementById("footer").innerHTML = footer;
+</script>
+
+</body>
+</html>

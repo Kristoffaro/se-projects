@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movie Max</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mmax.css">
+  <script src="mmax.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-forms">
+
+<!-- Header from mmax.js -->
+  <div id="header"></div>
+
+<!-- Page form -->
+<div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+  <h2>Log in</h2>
+  <form action="#">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Log In</button>
+   <p><a class="dashed" href="forgot.html">Forgot Username or password?</a></p>
+  </form>
+</div>
+
+<div class="container col-sm-6 forms-bottom">
+  New to MovieMax? <mark><a class="dashed" href="register.html">register</a></mark>
+</div>
+
+<!-- Default Footer with links from mmax.js-->
+<div id = "footer" class="row justify-content-*-center"></div>
+
+<script>
+document.getElementById("header").innerHTML = forms_header;
+document.getElementById("footer").innerHTML = footer;
+</script>
+
+</body>
+</html>

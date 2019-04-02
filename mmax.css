@@ -1,0 +1,42 @@
+body.bg-forms {background-color: #ddd;}
+
+h1, h2 {color:#33586a; margin:10px 0;}
+
+.search h2 {margin-top:20px; text-align: left;}
+
+.movie-details {margin-top:20px; color:#464646;}
+.movie-details h1 {margin:0;}
+
+.h1-details {margin:0; padding:0;}
+
+.forms h1, h2 {text-align: center; margin:5px 0 10px 0;}
+.logo {font-size: 29px;}
+
+.forms {border:#ccc 1px solid;
+        margin-top: 30px;
+        margin-bottom:0px;
+        background-color: #fff;
+        max-width:500px;
+      }
+
+.forms-bottom {max-width:500px; margin-top:0; padding: 0;}
+.forms button {width:100%; margin-bottom:15px;}
+.forms p {padding-top: 10px; font-size: 14px;}
+
+a.dashed {color:#464646; border-bottom:#464646 1px dashed;}
+a.dashed:hover {text-decoration: none; color:#000;}
+
+.btn-primary {background-color: #069; border-color: #069;}
+.buy {width:30%; max-width: 150px; margin:15px 20px 20px 0;}
+
+.search {color:#464646;}
+#footer {border-top:#ccc 1px solid;
+  background-color: #ddd;
+  margin:30px 0 0 0;
+  padding:10px 0 20px 0;
+}
+
+#footer li a, a:visited {color: #464646;}
+#footer li a:hover {color: #000; text-decoration: none;}
+#footer li {color: #464646; margin:7px 25px;}
+#footer p {margin-left:25px;}
