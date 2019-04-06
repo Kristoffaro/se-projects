@@ -1,6 +1,7 @@
 body.bg-forms {background-color: #ddd;}
 
 h1, h2 {color:#33586a; margin:10px 0;}
+p {margin-top:10px}
 
 .search h2 {margin-top:20px; text-align: left;}
 
@@ -9,7 +10,7 @@ h1, h2 {color:#33586a; margin:10px 0;}
 
 .h1-details {margin:0; padding:0;}
 
-.forms h1, h2 {text-align: center; margin:5px 0 10px 0;}
+.forms h1, h2 {text-align: center; margin:15px 0 10px 0;}
 .logo {font-size: 29px;}
 
 .forms {border:#ccc 1px solid;
@@ -28,6 +29,11 @@ a.dashed:hover {text-decoration: none; color:#000;}
 
 .btn-primary {background-color: #069; border-color: #069;}
 .buy {width:30%; max-width: 150px; margin:15px 20px 20px 0;}
+
+.stream {margin:20px 0}
+.stream button {margin-left:20px}
+.gray  {color:#666; font-weight: bold;}
+.gray-bg  {border-top:#aaa 1px solid;}
 
 .search {color:#464646;}
 #footer {border-top:#ccc 1px solid;

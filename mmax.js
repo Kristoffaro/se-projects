@@ -22,3 +22,17 @@ var footer = '<div class="col col-sm-4" style="">' +
 // header for pages with forms
 var forms_header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
     '<a class="navbar-brand" href="index.html"> <span class="logo">MovieMax</span></a></nav>'
+
+var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
+    '<a class="navbar-brand" href="index.html"> <span class="logo">MovieMax</span></a>' +
+    '<form class="form-inline col-sm " action="#"> <input class=' +
+    '"form-control mr-sm-2  col-sm-8" type="text" placeholder="Search movie">' +
+    '<button class="btn btn-primary" type="submit">Search</button> </form>' +
+    '<ul class="navbar-nav"><li class="nav-item dropdown">'+
+    '<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">'+
+    'My account</a><div class="dropdown-menu">' +
+    '<a class="dropdown-item" href="#">Edit profile</a>'+
+    '<a class="dropdown-item" href="#">Movie library</a>'+
+    '<a class="dropdown-item" href="#">History</a></div></li>' +
+    '<li class="nav-item"><a class="nav-link" href="#">Cart</a>' +
+    '</li></ul></nav>'
