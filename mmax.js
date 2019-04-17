@@ -25,7 +25,7 @@ var forms_header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
 
 var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
     '<a class="navbar-brand" href="/se-projects/index.html"> <span class="logo">MovieMax</span></a>' +
-    '<form class="form-inline col-sm " action="#"> <input class=' +
+    '<form class="form-inline col-sm " action="search.html"> <input class=' +
     '"form-control mr-sm-2  col-sm-8" type="text" placeholder="Search movie">' +
     '<button class="btn btn-primary" type="submit">Search</button> </form>' +
     '<ul class="navbar-nav"><li class="nav-item dropdown">'+
