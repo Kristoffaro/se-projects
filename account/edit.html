@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Edit profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../mmax.css">
+  <script src="../mmax.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Default Header with navbar from mmax.js-->
+<div id="header"></div>
+
+<!-- Edit profile -->
+<div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+  <h2>Edit profile</h2>
+  <form action="#">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group">
+      <label for="cardAdd1">Billing address:</label>
+      <input type="text" class="form-control" id="cardAdd1" placeholder="address line 1" name="cardAdd1">
+      <input type="text" class="form-control my-2" id="cardAdd2" placeholder="address line 2" name="cardAdd2">
+    </div>
+    <div class="form-group form-check">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+<br>
+
+</div>
+
+
+<!-- Default Footer with links from mmax.js-->
+<div id = "footer" class="row justify-content-*-center"></div>
+
+<script>
+document.getElementById("header").innerHTML = header_loggedIn;
+document.getElementById("footer").innerHTML = footer;
+</script>
+
+</body>
+</html>

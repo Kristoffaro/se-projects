@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MovieMax Watch History</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../mmax.css">
+  <script src="../mmax.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Default Header with navbar from mmax.js-->
+<div id="header"></div>
+
+<!-- User History -->
+<div class="container">
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#watch"><h5>Watch History</h5></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#search"><h5>Search History</h5></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#favs"><h5>Favorites</h5></a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <!-- Watch History -->
+    <div id="watch" class="container tab-pane active"><br>
+          <table class="table table-striped">
+              <tr>
+                <td>date</td>
+                <td><a href="../movie.html">Movie Title (year)</a></td>
+                <td><a href="#" title="remove from watch history">x</a></td>
+              </tr>
+              <tr>
+                <td>date</td>
+                <td><a href="../movie.html">Movie Title (year)</a></td>
+                <td><a href="#" title="remove from watch history">x</a></td>
+              </tr>
+              <tr>
+                <td>date</td>
+                <td><a href="../movie.html">Movie Title (year)</a></td>
+                <td><a href="#" title="remove from watch history">x</a></td>
+              </tr>
+              <tr>
+                <td>date</td>
+                <td><a href="../movie.html">Movie Title (year)</a></td>
+                <td><a href="#" title="remove from watch history">x</a></td>
+              </tr>
+              <tr>
+                <td>date</td>
+                <td><a href="../movie.html">Movie Title (year)</a></td>
+                <td><a href="#" title="remove from watch history">x</a></td>
+              </tr>
+          </table>
+   </div>
+
+    <!-- Search History -->
+    <div id="search" class="container tab-pane fade"><br>
+      <table class="table table-striped">
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from search history">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from search history">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from search history">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from search history">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from search history">x</a></td>
+          </tr>
+      </table>
+    </div>
+
+    <!-- Favorites -->
+    <div id="favs" class="container tab-pane fade"><br>
+      <table class="table table-striped">
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from favorites">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from favorites">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from favorites">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from favorites">x</a></td>
+          </tr>
+          <tr>
+            <td>date</td>
+            <td><a href="../movie.html">Movie Title (year)</a></td>
+            <td><a href="#" title="remove from favorites">x</a></td>
+          </tr>
+      </table>
+    </div>
+
+  </div>
+
+<div><p><a class="dashed" href="library.html">&lt; my movie library</a></p></div>
+</div>
+
+
+<!-- Default Footer with links from mmax.js-->
+<div id = "footer" class="row justify-content-*-center"></div>
+
+<script>
+document.getElementById("header").innerHTML = header_loggedIn;
+document.getElementById("footer").innerHTML = footer;
+</script>
+
+</body>
+</html>
