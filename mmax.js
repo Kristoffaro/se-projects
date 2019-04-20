@@ -1,7 +1,7 @@
 // default header for all pages except forms
 var header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
-    '<a class="navbar-brand" href="index.html"> <span class="logo">MovieMax</span></a>' +
-    '<form class="form-inline col-sm " action="search.html"> <input class=' +
+    '<a class="navbar-brand" href="/se-projects/index.html"> <span class="logo">MovieMax</span></a>' +
+    '<form class="form-inline col-sm " action="/se-projects/search.html"> <input class=' +
     '"form-control mr-sm-2  col-sm-8" type="text" id="query" name="query" placeholder="Search movie">' +
     '<button class="btn btn-primary" type="submit">Search</button> </form>' +
     '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="login.html">' +
@@ -25,7 +25,7 @@ var forms_header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
 
 var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
     '<a class="navbar-brand" href="/se-projects/index.html"> <span class="logo">MovieMax</span></a>' +
-    '<form class="form-inline col-sm " action="search.html"> <input class=' +
+    '<form class="form-inline col-sm " action="/se-projects/search.html"> <input class=' +
     '"form-control mr-sm-2  col-sm-8" type="text" placeholder="Search movie">' +
     '<button class="btn btn-primary" type="submit">Search</button> </form>' +
     '<ul class="navbar-nav"><li class="nav-item dropdown">'+
