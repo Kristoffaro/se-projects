@@ -53,7 +53,7 @@ const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/
 const ul = document.getElementById('movies');
 
 // get movie with match
-function getMovies(searchString, ul) {
+function getMovies(searchString) {
     window.fetch(movies_endpoint + toTitleCase(searchString))
         .then((resp) => resp.json())
         .then(function (data) {
