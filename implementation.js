@@ -72,10 +72,9 @@ function getMovies(searchString) {
 // case matching
 function toTitleCase(str) {
     return str.replace(
-        /\b\w/g,
+        /\w\S*/g,
         function (txt) {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-
         }
     );
 }
