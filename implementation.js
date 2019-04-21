@@ -1,18 +1,6 @@
 const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
 const app = document.getElementById('moviesList');
 
-// pulls data from url
-function url_query(query) {
-    query = query.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var expr = "[\\?&]" + query + "=([^&#]*)";
-    var regex = new RegExp(expr);
-    var results = regex.exec(window.location.href);
-    if (results !== null) {
-        return results[1];
-    } else {
-        return false;
-    }
-}
 // get movie function
 function getMovies(searchString) {
 

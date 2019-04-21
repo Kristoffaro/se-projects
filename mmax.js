@@ -36,3 +36,16 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     '<a class="dropdown-item" href="/se-projects/account/history.html">History</a></div></li>' +
     '<li class="nav-item"><a class="nav-link" href="/se-projects/cart.html">Cart</a>' +
     '</li></ul></nav>'
+    
+// pulls data from url
+function url_query(query) {
+    query = query.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var expr = "[\\?&]" + query + "=([^&#]*)";
+    var regex = new RegExp(expr);
+    var results = regex.exec(window.location.href);
+    if (results !== null) {
+        return results[1];
+    } else {
+        return false;
+    }
+}
