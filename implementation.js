@@ -12,9 +12,6 @@ function getMovies(searchString) {
     var request = new XMLHttpRequest()
 
     // Open a new connection, using the GET request on the URL endpoint
-    // ghibliapi is a placeholder until i get our movies endpoint working
-    // movies_endpoint + toTitleCase(searchString)
-    // https://ghibliapi.herokuapp.com/films
     request.open('GET', movies_endpoint + toTitleCase(searchString), true);
 
     request.onload = function () {
@@ -49,7 +46,7 @@ function getMovies(searchString) {
                 const plot = document.createElement('p')
                 movie.plot = movie.plot.substring(0, 300)
                 plot.textContent = `${movie.plot}...`
-                
+
                 link.appendChild(img)
                 infoCard.appendChild(h3)
                 infoCard.appendChild(actors)
@@ -75,9 +72,10 @@ function getMovies(searchString) {
 // case matching
 function toTitleCase(str) {
     return str.replace(
-        /\w\S*/g,
+        /\b\w/g,
         function (txt) {
             return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+
         }
     );
 }
