@@ -13,15 +13,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="getMovies2(url_query('query'))">
+<body onload="getMovies(url_query('query'))">
 
   <!-- Default Header with navbar from mmax.js-->
   <div id="header"></div>
-
   <!-- Search results -->
   <div class="container search">
-    <h2>Search results for <mark>searchTerm</mark></h2>
-    <ul id="moviesList"></ul>
+    <h2>Search results for <mark>
+        <script>document.write(url_query('query'))</script></mark></h2>
     <!-- Search filter  -->
     <h5><a href="#filter" class="dashed" data-toggle="collapse">Filter results</a></h5>
     <div id="filter" class="collapse shadow p-3 mb-5 bg-white">
@@ -95,6 +94,10 @@
 
     </div>
     <br>
+    <!-- Temporary -->
+    <div id="moviesList"></div>
+    <script src="implementation.js"></script>
+    
     <div class="row shadow p-3 mb-5 bg-white">
       <div class="col col-sm-2">
         <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
