@@ -1,7 +1,7 @@
 const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
 const app = document.getElementById('moviesList');
 
-// get movie function 2
+// get movie function
 function getMovies(searchString) {
 
     const container = document.createElement('div');
@@ -14,7 +14,8 @@ function getMovies(searchString) {
     // Open a new connection, using the GET request on the URL endpoint
     // ghibliapi is a placeholder until i get our movies endpoint working
     // movies_endpoint + toTitleCase(searchString)
-    request.open('GET', 'https://ghibliapi.herokuapp.com/films', true);
+    // https://ghibliapi.herokuapp.com/films
+    request.open('GET', movies_endpoint + toTitleCase(searchString), true);
 
     request.onload = function () {
         // Begin accessing JSON data here
@@ -31,6 +32,7 @@ function getMovies(searchString) {
                 link.setAttribute('href', 'movie.html')
                 const img = document.createElement('IMG')
                 img.setAttribute('src', 'poster.jpg')
+                img.setAttribute('class', 'img-fluid')
 
                 const infoCard = document.createElement('div')
                 infoCard.setAttribute('class', 'col-10')
