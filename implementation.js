@@ -27,6 +27,8 @@ function getMovies(searchString) {
 
                 const imgCard = document.createElement('div')
                 imgCard.setAttribute('class', 'col col-sm-2')
+                const link = document.createElement('a')
+                link.setAttribute('href', 'movie.html')
                 const img = document.createElement('IMG')
                 img.setAttribute('src', 'poster.jpg')
 
@@ -40,9 +42,10 @@ function getMovies(searchString) {
                 movie.description = movie.description.substring(0, 300)
                 p.textContent = `${movie.description}...`
                 
+                link.appendChild(img)
                 infoCard.appendChild(h3)
                 infoCard.appendChild(p)
-                imgCard.appendChild(img)
+                imgCard.appendChild(link)
                 container.appendChild(card)
                 card.appendChild(imgCard)
                 card.appendChild(infoCard)
