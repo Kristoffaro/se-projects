@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max Search Results</title>
   <meta charset="utf-8">
@@ -11,138 +12,111 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
+  <!-- Search results -->
+  <div class="container search">
+    <h2>Search results for <mark>
+        <script>document.write(toTitleCase(url_query('query')))</script></mark></h2>
+    <!-- Search filter  -->
+    <h5><a href="#filter" class="dashed" data-toggle="collapse">Filter results</a></h5>
+    <div id="filter" class="collapse shadow p-3 mb-5 bg-white">
+      <form action="#">
+        <div class="row">
 
-<!-- Search results -->
-<div class="container search">
-  <h2>Search results for <mark>searchTerm</mark></h2>
- <!-- Search filter  -->
-  <h5><a href="#filter" class = "dashed" data-toggle="collapse">Filter results</a></h5>
-  <div id="filter" class="collapse shadow p-3 mb-5 bg-white">
-    <form action="#">
-    <div class="row">
-
-      <div class="col-sm-6">
-        <div class="form-group form-inline">
-          <label for="actor">Actor:</label>
-          <input type="text" class="form-control m-2" id="actor" placeholder="" name="actor">
-        </div>
-        <div class="form-group form-inline ">
-          <label for="studio">Studio:</label>
-          <input type="text" class="form-control m-2" id="studio" placeholder="" name="studio">
-        </div>
-        <div class="form-group form-inline ">
-          <label for="mode">Mode:</label>
-          <input type="text" class="form-control m-2" id="mode" placeholder="" name="mode">
-        </div>
-        <div class="form-group form-inline ">
-          <label for="genre">Genre: </label>
-          <select class="form-control m-2" id="genre">
-            <option>drama</option>
-            <option>adventure</option>
-            <option>science fiction</option>
-            <option>genre 4</option>
-          </select>
-        </div>
-        <div class="form-group form-inline ">
-          <label for="theme">Theme:</label>
-          <select class="form-control m-2" id="theme">
-            <option>theme 1</option>
-            <option>theme 2</option>
-            <option>theme 3</option>
-            <option>theme 4</option>
-          </select>
-        </div>
-
-
-      </div>
-
-      <div class = "col-sm-6">
-        <div class="form-group form-inline">
-          <label for="director">Director :</label>
-          <input type="text" class="form-control m-2" id="director" placeholder="" name="director">
-        </div>
+          <div class="col-sm-6">
+            <div class="form-group form-inline">
+              <label for="actor">Actor:</label>
+              <input type="text" class="form-control m-2" id="actor" placeholder="" name="actor">
+            </div>
+            <div class="form-group form-inline ">
+              <label for="studio">Studio:</label>
+              <input type="text" class="form-control m-2" id="studio" placeholder="" name="studio">
+            </div>
+            <div class="form-group form-inline ">
+              <label for="mode">Mode:</label>
+              <input type="text" class="form-control m-2" id="mode" placeholder="" name="mode">
+            </div>
+            <div class="form-group form-inline ">
+              <label for="genre">Genre: </label>
+              <select class="form-control m-2" id="genre">
+                <option>drama</option>
+                <option>adventure</option>
+                <option>science fiction</option>
+                <option>genre 4</option>
+              </select>
+            </div>
+            <div class="form-group form-inline ">
+              <label for="theme">Theme:</label>
+              <select class="form-control m-2" id="theme">
+                <option>theme 1</option>
+                <option>theme 2</option>
+                <option>theme 3</option>
+                <option>theme 4</option>
+              </select>
+            </div>
 
 
-        <div class="form-group form-inline ">
-          <label for="decade">Decade:&nbsp;&nbsp;</label>
-          <input type="text" class="form-control m-2 col-sm-3" id="decade" placeholder="1980" name="decade">
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group form-inline">
+              <label for="director">Director :</label>
+              <input type="text" class="form-control m-2" id="director" placeholder="" name="director">
+            </div>
+
+
+            <div class="form-group form-inline ">
+              <label for="decade">Decade:&nbsp;&nbsp;</label>
+              <input type="text" class="form-control m-2 col-sm-3" id="decade" placeholder="1980" name="decade">
+            </div>
+
+            <div class="form-group form-inline ">
+              <label for="reviews">Reviews:&nbsp;</label>
+              <input type="number" class="form-control m-2 col-sm-3" id="reviews" placeholder="" name="reviews">
+            </div>
+            <div class="form-group form-inline ">
+              <label for="price">Max Price:</label>
+              <input type="number" class="form-control m-2 col-sm-3" id="price" placeholder="" name="price">
+            </div>
+            <div class="form-group form-check"></div>
+            <button type="submit" class="btn btn-primary my-2">Apply filter</button>
+
+          </div>
+
         </div>
 
-        <div class="form-group form-inline ">
-          <label for="reviews">Reviews:&nbsp;</label>
-          <input type="number" class="form-control m-2 col-sm-3" id="reviews" placeholder="" name="reviews">
-        </div>
-        <div class="form-group form-inline ">
-          <label for="price">Max Price:</label>
-          <input type="number" class="form-control m-2 col-sm-3" id="price" placeholder="" name="price">
-        </div>
-        <div class="form-group form-check"></div>
-        <button type="submit" class="btn btn-primary my-2">Apply filter</button>
+      </form>
 
-      </div>
 
     </div>
-
-    </form>
-
-
-  </div>
-  <br>
-  <div class="row shadow p-3 mb-5 bg-white">
-    <div class="col col-sm-2">
-      <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col-10">
-      <h3>Movie title (year)</h3>
-      <p><b>Director </b> ...<br>
-      <b>Cast</b> ...<br>
-      <b>Overview </b>...</p>
-    </div>
-  </div>
-  <div class="row shadow p-3 mb-5 bg-white">
-    <div class="col col-sm-2">
-      <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col-10">
-      <h3>Movie title (year)</h3>
-      <p><b>Director </b> ...<br>
-      <b>Cast</b> ...<br>
-      <b>Overview </b>...</p>
-    </div>
-  </div>
-  <div class="row shadow p-3 mb-5 bg-white">
-    <div class="col col-sm-2">
-      <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col-10">
-      <h3>Movie title (year)</h3>
-      <p><b>Director </b> ...<br>
-      <b>Cast</b> ...<br>
-      <b>Overview </b>...</p>
-    </div>
+    <br>
+    <!-- Movie Listing -->
+    <div id="moviesList"></div>
+    <script src="implementation.js"></script>
+    <script>getMovies(url_query('query'))</script>
+    
+    <!-- Pagination -->
+    <ul class="pagination">
+      <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
   </div>
 
-<!-- Pagination -->
-  <ul class="pagination">
-  <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-</ul>
-</div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
-
-<script>
-document.getElementById("header").innerHTML = header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    document.getElementById("header").innerHTML = header;
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>
