@@ -1,7 +1,7 @@
 const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
 const app = document.getElementById('moviesList');
 const people_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/people/';
-
+const genre_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/genre-theme/';
 // get movie function
 function getMovies(searchString, type) {
 
@@ -17,6 +17,8 @@ function getMovies(searchString, type) {
         request.open('GET', movies_endpoint + toTitleCase(searchString), true);
     } else if (type === 'people'){
         request.open('GET', people_endpoint + toTitleCase(searchString), true);
+    } else if(type === 'genre'){
+        request.open('GET', genre_endpoint + toTitleCase(searchString), true);
     }
 
     request.onload = function () {
@@ -43,10 +45,16 @@ function getMovies(searchString, type) {
 
                 const actors = document.createElement('i')
                 actors.textContent = 'Cast: ' + movie.actors
+
                 const br = document.createElement('br')
 
                 const director = document.createElement('i')
                 director.textContent = 'Director: ' + movie.director
+
+                const br2 = document.createElement('br')
+
+                const genre = document.createElement('i')
+                genre.textContent = 'Genre: ' + movie.genre
 
                 const plot = document.createElement('p')
                 movie.plot = movie.plot.substring(0, 300)
@@ -57,6 +65,8 @@ function getMovies(searchString, type) {
                 infoCard.appendChild(actors)
                 infoCard.appendChild(br)
                 infoCard.appendChild(director)
+                infoCard.appendChild(br2)
+                infoCard.appendChild(genre)
                 infoCard.appendChild(plot)
                 imgCard.appendChild(link)
                 container.appendChild(card)

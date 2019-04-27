@@ -27,6 +27,8 @@
             document.write(toTitleCase(url_query('actor')));
           } else if (url_query('director').length > 0) {
             document.write(toTitleCase(url_query('director')));
+          }  else if (url_query('genre').length > 0) {
+            document.write(toTitleCase(url_query('genre')));
           }
         </script></mark>
     </h2>
@@ -87,6 +89,8 @@
         getMovies(url_query('actor'), 'people');
       } else if (url_query('director').length > 0) {
         getMovies(url_query('director'), 'people');
+      } else if (url_query('genre').length > 0) {
+        getMovies(url_query('genre'), 'genre');
       }
     </script>
 
