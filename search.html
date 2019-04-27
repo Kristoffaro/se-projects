@@ -20,8 +20,16 @@
   <!-- Search results -->
   <div class="container search">
     <h2>Search results for <mark>
-        <script>document.write(toTitleCase(url_query('query')))</script></mark></h2>
-
+        <script>
+          if (url_query('query').length > 0) {
+            document.write(toTitleCase(url_query('query')));
+          } else if (url_query('actor').length > 0) {
+            document.write(toTitleCase(url_query('actor')));
+          } else if (url_query('director').length > 0) {
+            document.write(toTitleCase(url_query('director')));
+          }
+        </script></mark>
+    </h2>
     <!-- Search filter  -->
     <h5><a href="#filter" class="dashed" data-toggle="collapse">Advanced search</a></h5>
     <div id="filter" class="collapse shadow p-3 mb-5 bg-white">
@@ -71,8 +79,16 @@
     <br>
     <!-- Movie Listing -->
     <div id="moviesList"></div>
-    <script src="implementation.js"></script>
-    <script>getMovies(url_query('query'))</script>
+    <script src="searchImpl.js"></script>
+    <script>
+      if (url_query('query').length > 0) {
+        getMovies(url_query('query'), 'query');
+      } else if (url_query('actor').length > 0) {
+        getMovies(url_query('actor'), 'people');
+      } else if (url_query('director').length > 0) {
+        getMovies(url_query('director'), 'people');
+      }
+    </script>
 
   </div>
 

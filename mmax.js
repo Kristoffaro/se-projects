@@ -38,6 +38,8 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     '<li class="nav-item"><a class="nav-link" href="/se-projects/cart.html">Cart</a>' +
     '</li></ul></nav>'
 
+var loggedIn = localStorage.getItem("loggedIn");
+
 // pulls data from url
 function url_query(query) {
     query = query.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -54,18 +56,26 @@ function url_query(query) {
 // case matching
 function toTitleCase(str) {
     result = str;
-    for(i = 0; i < str.length; i++){
-        if(result.charAt(0) === '+'){
+    for (i = 0; i < str.length; i++) {
+        if (result.charAt(0) === '+') {
             result = result.substring(1)
         }
-        if(result.charAt(result.length-1) === '+'){
+        if (result.charAt(result.length - 1) === '+') {
             result = result.substring(0, result.length - 1)
         }
     }
     return result.replace(
         /\w*/gm,
         function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            if (txt !== 'of' && txt !== 'in' && txt !== 'to') {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            } else {
+                return txt
+            }
         }
     );
+}
+
+function logIn() {
+    localStorage.setItem("loggedIn", true);
 }
