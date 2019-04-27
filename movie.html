@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col">Rating: <script>document.write(movieRating)</script></div>
           <div class="col">Release: <script>document.write(movieYear)</script></div>
-          <div class="col">Length: <script>document.write(movieRuntime)</script></div>
+          <div class="col"><script>document.write(movieRuntime)</script></div>
           <div class="col">Score: <script>document.write(movieReview)</script></div>
         </div>
         <form action="#" method="get">
@@ -55,26 +55,10 @@
     </div>
 
     <h4>Similar movies</h4>
-    <div class="row">
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-      <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-      </div>
-    </div>
+    <div id="similarMovies"></div>
+    <script src="similarImpl.js"></script>
+    <script>getMovies(movieGenre)</script>
+    
   </div>
 
   <!-- Default Footer with links from mmax.js-->
