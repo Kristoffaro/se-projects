@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max</title>
   <meta charset="utf-8">
@@ -13,50 +14,22 @@
 </head>
 
 <body>
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
 
-<!-- New movies listing -->
-<div class="container">
-  <h1>New movies</h1>
-  <div class="row">
-    <div class="col">
-      <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-        <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col">
-      <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-        <a href="movie.html"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-  </div>
-</div>
+  <!-- New movies listing -->
+  <div id="newMovies"></div>
+  <script src="indexImpl.js"></script>
+  <script>getMovies()</script>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-  document.getElementById("header").innerHTML = header;
-  document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    document.getElementById("header").innerHTML = header;
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>

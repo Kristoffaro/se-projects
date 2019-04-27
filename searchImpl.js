@@ -116,19 +116,3 @@ function toTitleCase(str) {
         }
     );
 }
-
-// save movie info
-function saveMovie(current) {
-    var movie = parseInt(current);
-    localStorage.setItem("movieTitle", movieList[movie].title);
-    localStorage.setItem("movieActors", movieList[movie].actors);
-    localStorage.setItem("movieDirector", movieList[movie].director);
-    localStorage.setItem("moviePoster", movieList[movie].poster);
-    localStorage.setItem("movieGenre", movieList[movie].genre);
-    localStorage.setItem("movieReview", movieList[movie].imdbRating);
-    localStorage.setItem("moviePlot", movieList[movie].plot);
-    localStorage.setItem("movieRating", movieList[movie].rated);
-    localStorage.setItem("movieYear", movieList[movie].year);
-    localStorage.setItem("movieRuntime", movieList[movie].runtime);
-}
-
