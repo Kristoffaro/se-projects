@@ -1,8 +1,9 @@
 const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
 const app = document.getElementById('moviesList');
+const people_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/people/';
 
 // get movie function
-function getMovies(searchString) {
+function getMovies(searchString, type) {
 
     const container = document.createElement('div');
     container.setAttribute('class', 'container');
@@ -12,7 +13,11 @@ function getMovies(searchString) {
     var request = new XMLHttpRequest()
 
     // Open a new connection, using the GET request on the URL endpoint
-    request.open('GET', movies_endpoint + toTitleCase(searchString), true);
+    if(type === 'query'){
+        request.open('GET', movies_endpoint + toTitleCase(searchString), true);
+    } else if (type === 'people'){
+        request.open('GET', people_endpoint + toTitleCase(searchString), true);
+    }
 
     request.onload = function () {
         // Begin accessing JSON data here
