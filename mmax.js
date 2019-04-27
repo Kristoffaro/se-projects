@@ -39,6 +39,18 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     '</li></ul></nav>'
 
 var loggedIn = localStorage.getItem("loggedIn");
+var lastSearched = localStorage.getItem("lastSearched");
+var lastType = localStorage.getItem("lastType");
+var movieTitle = localStorage.getItem("movieTitle");
+var movieActors = localStorage.getItem("movieActors");
+var movieDirector = localStorage.getItem("movieDirector");
+var moviePoster = localStorage.getItem("moviePoster");
+var movieReview = localStorage.getItem("movieReview");
+var moviePlot = localStorage.getItem("moviePlot");
+var movieRating = localStorage.getItem("movieRating");
+var movieYear = localStorage.getItem("movieYear");
+var movieRuntime = localStorage.getItem("movieRuntime");
+var movieGenre = localStorage.getItem("movieGenre");
 
 // pulls data from url
 function url_query(query) {

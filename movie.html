@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max</title>
   <meta charset="utf-8">
@@ -11,70 +12,79 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
 
-<!-- Movie details -->
-<div class="container">
+  <!-- Movie details -->
+  <div class="container">
 
-  <div class="row movie-details">
-    <div class="col col-sm-4 ">
-    <img class="img-fluid" src="poster_big.png" alt="Movie name">
-    </div>
-    <div class="col col-sm-6 shadow p-3 mb-5 bg-white rounded">
-      <h1>Movie Title </h1>
-      <div class="row">
-        <div class="col">rating</div>
-        <div class="col">year</div>
-        <div class="col">duration</div>
-        <div class="col">MPAA</div>
+    <div class="row movie-details">
+      <div class="col col-sm-4 " id="mainImage">
+        <script>
+          var img = document.createElement("img");
+          img.src = moviePoster;
+          img.className="img-fluid"
+          img.alt="Movie Name"
+          var src = document.getElementById("mainImage");
+          src.appendChild(img);
+        </script>
       </div>
-      <form action="#" method="get">
-      <button class="btn btn-danger buy" type="submit">Rent</button>
-      <button class="btn btn-danger buy" type="submit"
-              formaction="#">Buy</button>
-      </form>
-      <div><b>Genres:</b> </div>
-      <div><b>Mood:</b> </div>
-      <div><b>Cast:</b> <br><br> </div>
-      <div><b>Director</b>: </div>
-      <div><b>Overview:</b> <br><br><br><br></div>
-      <div class="float-right"><a class="dashed" href="search.html">&lt;&lt; back to search results</a></div>
+      <div class="col col-sm-6 shadow p-3 mb-5 bg-white rounded">
+        <h1>
+          <script>document.write(movieTitle)</script>
+        </h1>
+        <div class="row">
+          <div class="col">Rating: <script>document.write(movieRating)</script></div>
+          <div class="col">Release: <script>document.write(movieYear)</script></div>
+          <div class="col">Length: <script>document.write(movieRuntime)</script></div>
+          <div class="col">Score: <script>document.write(movieReview)</script></div>
+        </div>
+        <form action="#" method="get">
+          <button class="btn btn-danger buy" type="submit">Rent</button>
+          <button class="btn btn-danger buy" type="submit" formaction="#">Buy</button>
+        </form>
+        <div><b>Genres:</b> <script>document.write(movieGenre)</script></div>
+        <div><b>Cast:</b> <script>document.write(movieActors)</script><br><br> </div>
+        <div><b>Director:</b> <script>document.write(movieDirector)</script></div>
+        <div><b>Overview:</b> <script>document.write(moviePlot)</script><br><br><br><br></div>
+        <div class="float-right"><a class="dashed" href="javascript:history.back()">&lt;&lt; back to search results</a></div>
+      </div>
+    </div>
+
+    <h4>Similar movies</h4>
+    <div class="row">
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
+      <div class="col">
+        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
+      </div>
     </div>
   </div>
 
-  <h4>Similar movies</h4>
-  <div class="row">
-    <div class="col">
-      <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-    <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-    <div class="col">
-        <a href="#"><img class="img-fluid" src="poster.jpg" alt="Movie name"></a>
-    </div>
-  </div>
-</div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
-
-<script>
-document.getElementById("header").innerHTML = header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    document.getElementById("header").innerHTML = header;
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>
