@@ -9,7 +9,7 @@ var header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
     '</li></ul></nav>'
 
 // default footer for all pages
-var footer = '<div class="col col-sm-4" style="">' +
+var footer = '<div class="col col-sm-4 footer" style="">' +
     '<ul class="list-unstyled"><li class="nav-item"><a href="/se-projects/account/index.html">Your Account</a>' +
     '</li><li class="nav-item"><a href="/se-projects/register.html">Register</a></li><p><small>' +
     '&copy; 2019 MovieMax</small></p></ul></div><div class="col col-sm-4">' +
