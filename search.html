@@ -29,6 +29,8 @@
             document.write(toTitleCase(url_query('director')));
           }  else if (url_query('genre').length > 0) {
             document.write(toTitleCase(url_query('genre')));
+          } else if (url_query('decade').length > 0) {
+            document.write(toTitleCase(url_query('decade')));
           }
         </script></mark>
     </h2>
@@ -91,6 +93,8 @@
         getMovies(url_query('director'), 'director');
       } else if (url_query('genre').length > 0) {
         getMovies(url_query('genre'), 'genre');
+      } else if (url_query('decade').length > 0) {
+        getMovies(url_query('decade'), 'decade');
       }
     </script>
 
