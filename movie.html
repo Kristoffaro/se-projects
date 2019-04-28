@@ -43,18 +43,29 @@
           <div class="col">Score: <script>document.write(movieReview)</script></div>
         </div>
         <form action="#" method="get" id="buttonsForPurchase">
-          <button class="btn btn-danger buy" type="submit"><script>document.write('Rent for $' + movieRent)</script></button>
-          <button class="btn btn-danger buy" type="submit" formaction="#"><script>document.write('Buy for $' + movieBuy)</script></button>
           <script>
-            localStorage.setItem('loggedIn', true)
-            if (localStorage.getItem('loggedIn')){
-              const buttons = document.getElementById('buttonsForPurchase')
+            localStorage.setItem('loggedIn', 'false')
+            const buttons = document.getElementById('buttonsForPurchase')
+            if (localStorage.getItem('loggedIn') === 'true'){
               const streamButton = document.createElement('BUTTON')
               streamButton.setAttribute('class', 'btn btn-danger buy')
               streamButton.setAttribute('type', 'submit')
               streamButton.innerText = 'Stream Now'
               streamButton.setAttribute('formaction', '/se-projects/account/stream.html')
               buttons.appendChild(streamButton)
+            } else {
+              const rentButton = document.createElement('BUTTON')
+              rentButton.setAttribute('class', 'btn btn-danger buy')
+              rentButton.setAttribute('type', 'submit')
+              rentButton.innerText = 'Rent for $' + movieRent
+              rentButton.setAttribute('formaction', '/se-projects/checkout.html')
+              buttons.appendChild(rentButton)
+              const buyButton = document.createElement('BUTTON')
+              buyButton.setAttribute('class', 'btn btn-danger buy')
+              buyButton.setAttribute('type', 'submit')
+              buyButton.innerText = 'Buy for $' + movieBuy
+              buyButton.setAttribute('formaction', '/se-projects/checkout.html')
+              buttons.appendChild(buyButton)
             }
           </script>
         </form>
