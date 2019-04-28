@@ -1,4 +1,4 @@
-const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
+const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/all/';
 const app = document.getElementById('newMovies');
 var movieList = [];
 
@@ -20,15 +20,16 @@ function getMovies() {
     container.appendChild(row2)
 
     var request = new XMLHttpRequest()
-    request.open('GET', movies_endpoint + 'A', true)
+    request.open('GET', movies_endpoint + 'a', true)
 
     request.onload = function () {
         var data = JSON.parse(this.response);
         if (request.status >= 200 && request.status < 400) {
+            var j = 0;
             for (var i = 0; i < data.movies.length; i++) {
 
                 movieList.push(data.movies[i])
-                if (i < 4) {
+                if (j < 4 && data.movies[i].year === '2016') {
                     const col = document.createElement('div')
                     col.setAttribute('class', 'col')
 
@@ -48,7 +49,8 @@ function getMovies() {
                     link.appendChild(img)
                     col.appendChild(link)
                     row1.appendChild(col)
-                } else if (i < 8) {
+                    j++
+                } else if (j < 8 && data.movies[i].year === '2016') {
                     const col = document.createElement('div')
                     col.setAttribute('class', 'col')
 
@@ -68,6 +70,7 @@ function getMovies() {
                     link.appendChild(img)
                     col.appendChild(link)
                     row2.appendChild(col)
+                    j++
                 }
             }
         } else {
