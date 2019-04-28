@@ -42,9 +42,21 @@
           <div class="col"><script>document.write(movieRuntime)</script></div>
           <div class="col">Score: <script>document.write(movieReview)</script></div>
         </div>
-        <form action="#" method="get">
+        <form action="#" method="get" id="buttonsForPurchase">
           <button class="btn btn-danger buy" type="submit"><script>document.write('Rent for $' + movieRent)</script></button>
           <button class="btn btn-danger buy" type="submit" formaction="#"><script>document.write('Buy for $' + movieBuy)</script></button>
+          <script>
+            localStorage.setItem('loggedIn', true)
+            if (localStorage.getItem('loggedIn')){
+              const buttons = document.getElementById('buttonsForPurchase')
+              const streamButton = document.createElement('BUTTON')
+              streamButton.setAttribute('class', 'btn btn-danger buy')
+              streamButton.setAttribute('type', 'submit')
+              streamButton.innerText = 'Stream Now'
+              streamButton.setAttribute('formaction', '/se-projects/account/stream.html')
+              buttons.appendChild(streamButton)
+            }
+          </script>
         </form>
         <div><b>Genres:</b> <script>document.write(movieGenre)</script></div>
         <div><b>Cast:</b> <script>document.write(movieActors)</script><br><br> </div>
