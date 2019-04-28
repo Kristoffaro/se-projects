@@ -51,6 +51,8 @@ var movieRating = localStorage.getItem("movieRating");
 var movieYear = localStorage.getItem("movieYear");
 var movieRuntime = localStorage.getItem("movieRuntime");
 var movieGenre = localStorage.getItem("movieGenre");
+var movieBuy = localStorage.getItem("movieBuy");
+var movieRent = localStorage.getItem("movieRent");
 
 // pulls data from url
 function url_query(query) {
@@ -103,7 +105,8 @@ function saveMovie(current) {
     localStorage.setItem("movieReview", movieList[movie].imdbRating);
     localStorage.setItem("moviePlot", movieList[movie].plot);
     localStorage.setItem("movieRating", movieList[movie].rated);
-    date = movieList[movie].released.split(' ');
-    localStorage.setItem("movieYear", date[2]);
+    localStorage.setItem("movieYear", movieList[movie].year);
     localStorage.setItem("movieRuntime", movieList[movie].runtime);
+    localStorage.setItem("movieBuy", movieList[movie].priceBuy);
+    localStorage.setItem("movieRent", movieList[movie].priceRent);
 }

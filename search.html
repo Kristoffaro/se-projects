@@ -31,6 +31,10 @@
             document.write(toTitleCase(url_query('genre')));
           } else if (url_query('decade').length > 0) {
             document.write(toTitleCase(url_query('decade')));
+          } else if (url_query('reviews').length > 0) {
+            document.write(toTitleCase(url_query('reviews')));
+          } else if (url_query('price').length > 0) {
+            document.write(toTitleCase(url_query('price')));
           }
         </script></mark>
     </h2>
@@ -95,6 +99,10 @@
         getMovies(url_query('genre'), 'genre');
       } else if (url_query('decade').length > 0) {
         getMovies(url_query('decade'), 'decade');
+      } else if (url_query('reviews').length > 0) {
+        getMovies(url_query('reviews'), 'reviews');
+      } else if (url_query('price').length > 0) {
+        getMovies(url_query('price'), 'price');
       }
     </script>
 

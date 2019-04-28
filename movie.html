@@ -43,8 +43,8 @@
           <div class="col">Score: <script>document.write(movieReview)</script></div>
         </div>
         <form action="#" method="get">
-          <button class="btn btn-danger buy" type="submit">Rent</button>
-          <button class="btn btn-danger buy" type="submit" formaction="#">Buy</button>
+          <button class="btn btn-danger buy" type="submit"><script>document.write('Rent for $' + movieRent)</script></button>
+          <button class="btn btn-danger buy" type="submit" formaction="#"><script>document.write('Buy for $' + movieBuy)</script></button>
         </form>
         <div><b>Genres:</b> <script>document.write(movieGenre)</script></div>
         <div><b>Cast:</b> <script>document.write(movieActors)</script><br><br> </div>
