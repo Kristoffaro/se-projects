@@ -57,12 +57,16 @@
               const rentButton = document.createElement('BUTTON')
               rentButton.setAttribute('class', 'btn btn-danger buy')
               rentButton.setAttribute('type', 'submit')
+              rentButton.setAttribute('name', 'rent')
+              rentButton.setAttribute('value', movieRent)
               rentButton.innerText = 'Rent for $' + movieRent
               rentButton.setAttribute('formaction', '/se-projects/checkout.html')
               buttons.appendChild(rentButton)
               const buyButton = document.createElement('BUTTON')
               buyButton.setAttribute('class', 'btn btn-danger buy')
               buyButton.setAttribute('type', 'submit')
+              buyButton.setAttribute('name', 'buy')
+              buyButton.setAttribute('value', movieBuy)
               buyButton.innerText = 'Buy for $' + movieBuy
               buyButton.setAttribute('formaction', '/se-projects/checkout.html')
               buttons.appendChild(buyButton)
@@ -81,7 +85,7 @@
     <div id="similarMovies"></div>
     <script src="similarImpl.js"></script>
     <script>getMovies(movieGenre)</script>
-    
+
   </div>
 
   <!-- Default Footer with links from mmax.js-->
