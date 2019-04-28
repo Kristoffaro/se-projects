@@ -55,7 +55,8 @@ function getMovies(searchString, type) {
                 infoCard.setAttribute('class', 'col-10')
 
                 const h3 = document.createElement('h3')
-                h3.textContent = data.movies[i].title + ' (' + data.movies[i].year + ')'
+                var date = data.movies[i].released.split(' ');
+                h3.textContent = data.movies[i].title + ' (' + date[2] + ')'
 
                 const actors = document.createElement('i')
                 actors.textContent = 'Cast: ' + data.movies[i].actors

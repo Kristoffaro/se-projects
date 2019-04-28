@@ -103,6 +103,7 @@ function saveMovie(current) {
     localStorage.setItem("movieReview", movieList[movie].imdbRating);
     localStorage.setItem("moviePlot", movieList[movie].plot);
     localStorage.setItem("movieRating", movieList[movie].rated);
-    localStorage.setItem("movieYear", movieList[movie].year);
+    date = movieList[movie].released.split(' ');
+    localStorage.setItem("movieYear", date[2]);
     localStorage.setItem("movieRuntime", movieList[movie].runtime);
 }
