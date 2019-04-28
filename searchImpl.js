@@ -1,6 +1,7 @@
 const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/';
 const app = document.getElementById('moviesList');
-const people_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/people/';
+const actor_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/actor/';
+const director_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/director/';
 const genre_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/genre-theme/';
 var movieList = [];
 
@@ -19,8 +20,10 @@ function getMovies(searchString, type) {
     // Open a new connection, using the GET request on the URL endpoint
     if (type === 'query') {
         request.open('GET', movies_endpoint + toTitleCase(searchString), true);
-    } else if (type === 'people') {
-        request.open('GET', people_endpoint + toTitleCase(searchString), true);
+    } else if (type === 'actor') {
+        request.open('GET', actor_endpoint + toTitleCase(searchString), true);
+    } else if (type === 'director') {
+        request.open('GET', director_endpoint + toTitleCase(searchString), true);
     } else if (type === 'genre') {
         request.open('GET', genre_endpoint + toTitleCase(searchString), true);
     }

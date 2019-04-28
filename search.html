@@ -86,9 +86,9 @@
       if (url_query('query').length > 0) {
         getMovies(url_query('query'), 'query');
       } else if (url_query('actor').length > 0) {
-        getMovies(url_query('actor'), 'people');
+        getMovies(url_query('actor'), 'actor');
       } else if (url_query('director').length > 0) {
-        getMovies(url_query('director'), 'people');
+        getMovies(url_query('director'), 'director');
       } else if (url_query('genre').length > 0) {
         getMovies(url_query('genre'), 'genre');
       }
