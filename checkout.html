@@ -79,13 +79,13 @@
                 <script>
                   var price = 0;
                   if (url_query('rent').length > 0) {
-                    price = movieRent
-                    document.write('$' + price.toFixed(2))
+                    price = movieRent.toFixed(2)
+                    document.write('$' + price)
                   } else if (url_query('buy').length > 0) {
                     price = movieBuy
-                    document.write('$' + price.toFixed(2))
+                    document.write('$' + price)
                   }
-                  localStorage.setItem('checkoutPrice', price.toFixed(2))
+                  localStorage.setItem('checkoutPrice', price)
                 </script>
               </td>
             </tr>
@@ -95,7 +95,7 @@
               <tr class="gray-bg">
                 <td>Subtotal</td>
                 <td>
-                  <script>document.write('$' + price.toFixed(2))</script>
+                  <script>document.write('$' + price)</script>
                 </td>
               </tr>
               <tr>
