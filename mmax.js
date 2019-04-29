@@ -34,11 +34,14 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     'My account</a><div class="dropdown-menu">' +
     '<a class="dropdown-item" href="/se-projects/account/edit.html">Edit profile</a>' +
     '<a class="dropdown-item" href="/se-projects/account/library.html">Movie library</a>' +
-    '<a class="dropdown-item" href="/se-projects/account/history.html">History</a></div></li>' +
+    '<a class="dropdown-item" onclick="logOut()">Log Out</a></div></li>' +
     '<li class="nav-item"><a class="nav-link" href="/se-projects/cart.html">Cart</a>' +
     '</li></ul></nav>'
 
 var loggedIn = localStorage.getItem("loggedIn");
+var userId = localStorage.getItem("userId");
+var userOwned = localStorage.getItem("userOwned");
+var userRented = localStorage.getItem("userRented");
 var lastSearched = localStorage.getItem("lastSearched");
 var lastType = localStorage.getItem("lastType");
 var movieTitle = localStorage.getItem("movieTitle");
@@ -112,4 +115,12 @@ function saveMovie(current) {
     localStorage.setItem("movieRuntime", movieList[movie].runtime);
     localStorage.setItem("movieBuy", movieList[movie].priceBuy);
     localStorage.setItem("movieRent", movieList[movie].priceRent);
+}
+
+function logOut() {
+    localStorage.setItem("loggedIn", 'false')
+    localStorage.setItem("userId", "")
+    localStorage.setItem("userOwned", "")
+    localStorage.setItem("userRented", "")
+    window.location.href = "/se-projects/index.html"
 }

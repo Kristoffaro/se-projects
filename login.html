@@ -33,7 +33,8 @@
         <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
     </div>
-    <button type="submit" class="btn btn-primary">Log In</button>
+    <script src="loginImpl.js"></script>
+    <button type="submit" class="btn btn-primary" onclick="validateLogin(document.getElementById('username'), document.getElementById('pwd'))">Log In</button>
    <p><a class="dashed" href="forgot.html">Forgot Username or password?</a></p>
   </form>
 </div>

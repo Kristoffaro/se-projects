@@ -261,9 +261,7 @@ function getMovies(searchString, type) {
                 }
             }
         } else {
-            const errorMessage = document.createElement('marquee')
-            errorMessage.textContent = `Not Working!`
-            app.appendChild(errorMessage)
+            console.log("Error Retrieving from Database")
         }
     }
 

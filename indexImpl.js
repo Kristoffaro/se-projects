@@ -74,9 +74,7 @@ function getMovies() {
                 }
             }
         } else {
-            const errorMessage = document.createElement('marquee')
-            errorMessage.textContent = `Not Working!`
-            app.appendChild(errorMessage)
+            console.log("Error")
         }
     }
     request.send();
