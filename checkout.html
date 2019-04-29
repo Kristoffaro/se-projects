@@ -101,7 +101,7 @@
                 <td>Sales tax</td>
                 <td>
                   <script>
-                    var tax = price * 0.08
+                    var tax = Number(price) * 0.08
                     document.write('$' + tax.toFixed(2))
                   </script>
                 </td>
@@ -110,7 +110,7 @@
                 <td>Total</td>
                 <td>
                   <script>
-                    var total = price + tax
+                    var total = Number(price) + Number(tax)
                     document.write('$' + total.toFixed(2))
                   </script>
                 </td>
