@@ -82,6 +82,7 @@
                     price = movieRent
                     document.write('$' + price)
                   } else if (url_query('buy').length > 0) {
+                    price = movieBuy
                     document.write('$' + price)
                   }
                 </script>
@@ -100,8 +101,8 @@
                 <td>Sales tax</td>
                 <td>
                   <script>
-                    var tax = price * 0.8
-                    document.write(tax)
+                    var tax = (price * 0.08).toFixed(2)
+                    document.write('$' + tax)
                   </script>
                 </td>
               </tr>
@@ -109,8 +110,8 @@
                 <td>Total</td>
                 <td>
                   <script>
-                    var total = price + tax
-                    document.write(total)
+                    var total = (price + tax).toFixed(2)
+                    document.write('$' + total)
                   </script>
                 </td>
               </tr>
