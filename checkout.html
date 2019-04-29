@@ -77,13 +77,12 @@
               <td>Price</td>
               <td>
                 <script>
-                  var price = '0';
+                  var price;
                   if (url_query('rent').length > 0) {
-                    price = url_query('rent')
-                    price.toFixed(2)
+                    price = movieRent
                     document.write('$' + price)
                   } else if (url_query('buy').length > 0) {
-                    price = url_query('buy')
+                    price = movieBuy
                     document.write('$' + price)
                   }
                   localStorage.setItem('checkoutPrice', price)
