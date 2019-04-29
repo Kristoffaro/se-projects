@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max Checkout</title>
   <meta charset="utf-8">
@@ -11,116 +12,132 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body class="bg-forms">
 
-<!-- Header from mmax.js -->
+  <!-- Header from mmax.js -->
   <div id="header"></div>
 
-<!-- Page form -->
-<div class="container">
-  <h2>Checkout</h2>
+  <!-- Page form -->
+  <div class="container">
+    <h2>Checkout</h2>
     <form action="place_order.html">
-  <div class="row">
+      <div class="row">
 
-  <div class="col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+        <div class="col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
 
-  <div class="form-group">
-    <span class="gray">Select a payment method</span><br>
-    <input type="radio" name="cardType" id="visa" value="visa" checked>
-    <label for="visa">Visa</label>
-    <input type="radio" name="cardType" id="mc" value="mc">
-    <label for="mc">Mastercard</label>
-    <input type="radio" name="cardType" id="discover" value="discover">
-    <label for="discover">Discover</label>
+          <div class="form-group">
+            <span class="gray">Select a payment method</span><br>
+            <input type="radio" name="cardType" id="visa" value="visa" checked>
+            <label for="visa">Visa</label>
+            <input type="radio" name="cardType" id="mc" value="mc">
+            <label for="mc">Mastercard</label>
+            <input type="radio" name="cardType" id="discover" value="discover">
+            <label for="discover">Discover</label>
+          </div>
+
+
+
+          <div class="form-group">
+            <label for="cardname">Name on card:</label>
+            <input type="text" class="form-control" id="cardname" placeholder="Enter name" name="cardname">
+          </div>
+          <div class="form-group">
+            <label for="cardnum">Card number:</label>
+            <input type="text" class="form-control" id="cardnum" placeholder="Enter card number" name="cardnum">
+          </div>
+          <div class="form-group">
+            <label for="cardnum">Billing address:</label>
+            <input type="text" class="form-control" id="cardAdd1" placeholder="address line 1" name="cardAdd1">
+            <input type="text" class="form-control" id="cardAdd2" placeholder="address line 2" name="cardAdd2">
+          </div>
+          <div class="form-group">
+            <label for="valid">Valid thru</label>
+            <input type="text" maxlength="5" size="3" placeholder="mm/yy" id="valid" name="valid">
+            &nbsp;&nbsp;&nbsp;
+            <label for="valid">CVV</label>
+            <input type="text" maxlength="3" size="1" placeholder="***" id="cvv" name="cvv">
+
+          </div>
+
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="addCard"> add card to my account
+            </label>
+          </div>
+
+
+        </div>
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-4 forms shadow p-3 mb-5 bg-white rounded">
+          <span class="gray">ORDER SUMMARY</span><br><br>
+          <table class="table table-striped">
+            <tr>
+              <td>Price</td>
+              <td>
+                <script>
+                  var price = 0;
+                  if (url_query('rent').length > 0) {
+                    price = movieRent
+                    document.write('$' + price)
+                  } else if (url_query('buy').length > 0) {
+                    document.write('$' + price)
+                  }
+                </script>
+              </td>
+            </tr>
+          </table>
+          <table class="table table-borderless">
+            <tbody>
+              <tr class="gray-bg">
+                <td>Subtotal</td>
+                <td>
+                  <script>document.write('$' + price)</script>
+                </td>
+              </tr>
+              <tr>
+                <td>Sales tax</td>
+                <td>
+                  <script>
+                    var tax = price * 0.8
+                    document.write(tax)
+                  </script>
+                </td>
+              </tr>
+              <tr class="gray gray-bg">
+                <td>Total</td>
+                <td>
+                  <script>
+                    var total = price + tax
+                    document.write(total)
+                  </script>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+          <button type="submit" class="btn btn-primary">Continue</button>
+
+          <i>* You can review your order before placing it</i>
+
+        </div>
+      </div>
+
+    </form>
   </div>
 
 
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-    <div class="form-group">
-      <label for="cardname">Name on card:</label>
-      <input type="text" class="form-control" id="cardname" placeholder="Enter name" name="cardname">
-    </div>
-    <div class="form-group">
-      <label for="cardnum">Card number:</label>
-      <input type="text" class="form-control" id="cardnum" placeholder="Enter card number" name="cardnum">
-    </div>
-    <div class="form-group">
-      <label for="cardnum">Billing address:</label>
-      <input type="text" class="form-control" id="cardAdd1" placeholder="address line 1" name="cardAdd1">
-      <input type="text" class="form-control" id="cardAdd2" placeholder="address line 2" name="cardAdd2">
-    </div>
-    <div class="form-group">
-      <label for="valid">Valid thru</label>
-      <input type="text" maxlength="5" size="3"  placeholder="mm/yy" id="valid" name="valid">
-      &nbsp;&nbsp;&nbsp;
-      <label for="valid">CVV</label>
-      <input type="text" maxlength="3" size="1"  placeholder="***" id="cvv" name="cvv">
-
-    </div>
-
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="addCard"> add card to my account
-      </label>
-    </div>
-
-
-</div>
-<div class="col-sm-1"></div>
-
-<div class="col-sm-4 forms shadow p-3 mb-5 bg-white rounded">
-  <span class="gray">ORDER SUMMARY</span><br><br>
-  <table class="table table-striped">
-      <tr>
-        <td>item 1</td>
-        <td>$9.99</td>
-      </tr>
-      <tr>
-        <td>item 2</td>
-        <td>$9.99</td>
-      </tr>
-      <tr>
-        <td>item 3</td>
-        <td>$9.99</td>
-      </tr>
-  </table>
-  <table class="table table-borderless">
-    <tbody>
-  <tr class="gray-bg">
-    <td>Subtotal</td>
-    <td>$29.97</td>
-  </tr>
-  <tr>
-    <td>Sales tax</td>
-    <td>$1.80</td>
-  </tr>
-  <tr class="gray gray-bg">
-    <td>Total</td>
-    <td>$31.77</td>
-  </tr>
-</tbody>
-</table>
-
-
-
-  <button type="submit" class="btn btn-primary">Continue</button>
-
-<i>* You can review your order before placing it</i>
-
-</div>
-</div>
-
-</form>
-</div>
-
-
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
-
-<script>
-document.getElementById("header").innerHTML = forms_header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    document.getElementById("header").innerHTML = forms_header;
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>
