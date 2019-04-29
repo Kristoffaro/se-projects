@@ -88,31 +88,23 @@
     <span class="gray">ORDER SUMMARY </span> <a href="cart.html" class="dashed"> edit</a><br><br>
     <table class="table table-striped">
         <tr>
-          <td>item 1</td>
-          <td>$9.99</td>
-        </tr>
-        <tr>
-          <td>item 2</td>
-          <td>$9.99</td>
-        </tr>
-        <tr>
-          <td>item 3</td>
-          <td>$9.99</td>
+          <td>Price</td>
+          <td><script>document.write('$' + checkoutPrice)</script></td>
         </tr>
     </table>
     <table class="table table-borderless">
       <tbody>
     <tr class="gray-bg">
       <td>Subtotal</td>
-      <td>$29.97</td>
+      <td><script>document.write('$' + checkoutPrice)</script></td>
     </tr>
     <tr>
       <td>Sales tax</td>
-      <td>$1.80</td>
+      <td><script>document.write('$' + checkoutTax)</script></td>
     </tr>
     <tr class="gray gray-bg">
       <td>Total</td>
-      <td>$31.77</td>
+      <td><script>document.write('$' + checkoutTotal)</script></td>
     </tr>
   </tbody>
   </table>

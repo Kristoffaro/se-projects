@@ -53,6 +53,9 @@ var movieRuntime = localStorage.getItem("movieRuntime");
 var movieGenre = localStorage.getItem("movieGenre");
 var movieBuy = localStorage.getItem("movieBuy");
 var movieRent = localStorage.getItem("movieRent");
+var checkoutPrice = localStorage.getItem("checkoutPrice");
+var checkoutTax = localStorage.getItem("checkoutTax");
+var checkoutTotal = localStorage.getItem("checkoutTotal");
 
 // pulls data from url
 function url_query(query) {
