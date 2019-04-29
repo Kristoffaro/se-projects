@@ -22,11 +22,11 @@
   <form action="#">
     <div class="form-group">
       <label for="username">Username:</label>
-      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+      <input type="text" class="form-control" id="username" placeholder="Enter username">
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
     </div>
     <div class="form-group form-check">
       <label class="form-check-label">
@@ -34,7 +34,7 @@
       </label>
     </div>
     <script src="loginImpl.js"></script>
-    <button type="submit" class="btn btn-primary" onclick="validateLogin(document.getElementById('username').value, document.getElementById('pwd').value)">Log In</button>
+    <button class="btn btn-primary" onclick="validateLogin(document.getElementById('username').value, document.getElementById('pwd').value)">Log In</button>
    <p><a class="dashed" href="forgot.html">Forgot Username or password?</a></p>
   </form>
 </div>
