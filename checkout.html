@@ -79,10 +79,11 @@
                 <script>
                   var price = 0;
                   if (url_query('rent').length > 0) {
-                    price = movieRent.toFixed(2)
+                    price = url_query('rent')
+                    price.toFixed(2)
                     document.write('$' + price)
                   } else if (url_query('buy').length > 0) {
-                    price = movieBuy
+                    price = url_query('buy')
                     document.write('$' + price)
                   }
                   localStorage.setItem('checkoutPrice', price)
