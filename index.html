@@ -16,7 +16,13 @@
 <body>
   <!-- Default Header with navbar from mmax.js-->
   <div id="header"></div>
-
+  <div id="library"></div>
+  <script src="libraryImpl.js"></script>
+  <script>
+    if (loggedIn === 'true') {
+      getLibrary()
+    }
+  </script>
   <!-- New movies listing -->
   <div id="newMovies"></div>
   <script src="indexImpl.js"></script>

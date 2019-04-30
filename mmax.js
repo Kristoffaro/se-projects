@@ -95,10 +95,6 @@ function toTitleCase(str) {
     );
 }
 
-function logIn() {
-    localStorage.setItem("loggedIn", true);
-}
-
 // save movie info
 function saveMovie(current) {
     var movie = parseInt(current);
