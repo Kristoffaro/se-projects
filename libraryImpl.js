@@ -1,5 +1,5 @@
 const library_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/all/';
-const app = document.getElementById('library');
+const lib = document.getElementById('library');
 var movieList = [];
 const library = userOwned.split(', ')
 
@@ -7,7 +7,7 @@ function getLibrary() {
     if (userOwned.length > 0 || userRent.length > 0) {
         const container = document.createElement('div')
         container.setAttribute('class', 'container')
-        app.appendChild(container)
+        lib.appendChild(container)
 
         const h1 = document.createElement('h1')
         h1.textContent = 'Library'
