@@ -26,8 +26,8 @@
         <script>
           var img = document.createElement("img");
           img.src = moviePoster;
-          img.className="img-fluid"
-          img.alt="Movie Name"
+          img.className = "img-fluid"
+          img.alt = "Movie Name"
           var src = document.getElementById("mainImage");
           src.appendChild(img);
         </script>
@@ -37,16 +37,23 @@
           <script>document.write(movieTitle)</script>
         </h1>
         <div class="row">
-          <div class="col">Rating: <script>document.write(movieRating)</script></div>
-          <div class="col">Release: <script>document.write(movieYear)</script></div>
-          <div class="col"><script>document.write(movieRuntime)</script></div>
-          <div class="col">Score: <script>document.write(movieReview)</script></div>
+          <div class="col">Rating:
+            <script>document.write(movieRating)</script>
+          </div>
+          <div class="col">Release:
+            <script>document.write(movieYear)</script>
+          </div>
+          <div class="col">
+            <script>document.write(movieRuntime)</script>
+          </div>
+          <div class="col">Score:
+            <script>document.write(movieReview)</script>
+          </div>
         </div>
         <form action="#" method="get" id="buttonsForPurchase">
           <script>
-            localStorage.setItem('loggedIn', 'false')
             const buttons = document.getElementById('buttonsForPurchase')
-            if (localStorage.getItem('loggedIn') === 'true'){
+            if (localStorage.getItem('loggedIn') === 'true' && (localStorage.getitem('userOwned').split(',').includes(movieTitle) || localStorage.getitem('userRented').split(',').includes(movieTitle))) {
               const streamButton = document.createElement('BUTTON')
               streamButton.setAttribute('class', 'btn btn-danger buy')
               streamButton.setAttribute('type', 'submit')
@@ -73,11 +80,18 @@
             }
           </script>
         </form>
-        <div><b>Genres:</b> <script>document.write(movieGenre)</script></div>
-        <div><b>Cast:</b> <script>document.write(movieActors)</script><br><br> </div>
-        <div><b>Director:</b> <script>document.write(movieDirector)</script></div>
-        <div><b>Overview:</b> <script>document.write(moviePlot)</script><br><br><br><br></div>
-        <div class="float-right"><a class="dashed" href="javascript:history.back()">&lt;&lt; back to search results</a></div>
+        <div><b>Genres:</b>
+          <script>document.write(movieGenre)</script>
+        </div>
+        <div><b>Cast:</b>
+          <script>document.write(movieActors)</script><br><br> </div>
+        <div><b>Director:</b>
+          <script>document.write(movieDirector)</script>
+        </div>
+        <div><b>Overview:</b>
+          <script>document.write(moviePlot)</script><br><br><br><br></div>
+        <div class="float-right"><a class="dashed" href="javascript:history.back()">&lt;&lt; back to search results</a>
+        </div>
       </div>
     </div>
 
