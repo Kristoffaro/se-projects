@@ -4,7 +4,7 @@ var movieList = [];
 const ownedLib = userOwned.split(', ')
 const library = ownedLib.concat(userRented.split(', '))
 
-function getLibrary() {
+function getUserLibrary() {
     if (userOwned.length > 0 || userRent.length > 0) {
         const container = document.createElement('div')
         container.setAttribute('class', 'container')
