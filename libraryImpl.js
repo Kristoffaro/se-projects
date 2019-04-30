@@ -1,5 +1,5 @@
 function getLibrary() {
-    if (movieOwned.length > 0 || movieRent.length > 0) {
+    if (userOwned.length > 0 || userRent.length > 0) {
         const app = document.getElementById('library')
         const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/'
         var movieList = [];
