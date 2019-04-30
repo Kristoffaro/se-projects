@@ -20,7 +20,13 @@
 
   <!-- Movie library -->
   <div class="container">
-    <h2>Movie library</h2>
+    <div id="library"></div>
+    <script src="libraryImpl.js"></script>
+    <script>
+      if (loggedIn === 'true') {
+        getLibrary()
+      }
+    </script>
     <div class="row">
       <div class="col">
         <p class="library"><a href="stream.html"><b>Movie Title (year)</b> </a><br>
