@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max</title>
   <meta charset="utf-8">
@@ -11,25 +12,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
 
+<<<<<<< HEAD
 <!-- Page body -->
 <div class="container">
   <h1>About us</h1>
   <h4>Our Story...</h4>
 <p>We are a group of hard working, stressed out, software engineering students trying to make it. This Movie Max streaming service is the result of our collaborative efforts coming to life. We here at Movie Max hope you enjoy it as much as we enjoyed making it. 🤩</p>
 </div>
+=======
+  <!-- Page body -->
+  <div class="container">
+    <h1>About us</h1>
+    <p>Text here... </p>
+  </div>
+>>>>>>> c330a0d6d3be83c5ad1d5649460e83a6ab76b162
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-document.getElementById("header").innerHTML = header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    }
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>

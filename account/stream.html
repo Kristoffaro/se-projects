@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Watch a movie</title>
   <meta charset="utf-8">
@@ -11,32 +12,40 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
 
-<!-- Movie details -->
-<div class="container">
+  <!-- Movie details -->
+  <div class="container">
     <h2 class="stream">Movie Title (year) <small> MPAA duration</small></h2>
     <form action="#" method="get">
-        <p class="stream">rental expires <mark>05/01/19</mark> <button class="btn btn-danger extend"
-          type="submit">extend rental or purchase</button></p>
+      <p class="stream">rental expires <mark>05/01/19</mark> <button class="btn btn-danger extend" type="submit">extend
+          rental or purchase</button></p>
     </form>
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vKQi3bBA1y8"></iframe>
     </div>
-      <div><p><a class="dashed" href="history.html">&lt; my watch history</a></p></div>
+    <div>
+      <p><a class="dashed" href="history.html">&lt; my watch history</a></p>
+    </div>
 
-</div>
+  </div>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-document.getElementById("header").innerHTML = header_loggedIn;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    }
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>

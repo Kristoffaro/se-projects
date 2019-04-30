@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max</title>
   <meta charset="utf-8">
@@ -11,46 +12,52 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body class="bg-forms">
 
-<!-- Header from mmax.js -->
-<div id="header"></div>
+  <!-- Header from mmax.js -->
+  <div id="header"></div>
 
-<!-- Page form -->
-<div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
-  <h2>Create account</h2>
-  <form action="#">
-    <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-    </div>
-    <div class="form-group form-check">
-    </div>
-    <button type="submit" class="btn btn-primary">Register</button>
-  </form>
+  <!-- Page form -->
+  <div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+    <h2>Create account</h2>
+    <form action="#">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-group form-check">
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
 
 
-</div>
+  </div>
 
-<div class="container col-sm-6 forms-bottom">
-Already have an account? <mark><a class="dashed" href="login.html">Log in</a></mark>
-</div>
+  <div class="container col-sm-6 forms-bottom">
+    Already have an account? <mark><a class="dashed" href="login.html">Log in</a></mark>
+  </div>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-document.getElementById("header").innerHTML = forms_header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    };
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>
