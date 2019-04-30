@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Movie Max Contact Us</title>
   <meta charset="utf-8">
@@ -11,32 +12,38 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<!-- Default Header with navbar from mmax.js-->
-<div id="header"></div>
+  <!-- Default Header with navbar from mmax.js-->
+  <div id="header"></div>
 
-<!-- Page body -->
-<div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
-  <h2>Contact us</h2>
-  <form id="contact">
+  <!-- Page body -->
+  <div class="container col-sm-6 forms shadow p-3 mb-5 bg-white rounded">
+    <h2>Contact us</h2>
+    <form id="contact">
       <input type="text" id="name" class="form-control mb-4" placeholder="Name">
       <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
       <input type="text" id="subject" class="form-control mb-4" placeholder="Subject">
       <div class="form-group">
-          <textarea class="form-control rounded-0" id="text" rows="3" placeholder="Message"></textarea>
+        <textarea class="form-control rounded-0" id="text" rows="3" placeholder="Message"></textarea>
       </div>
       <button class="btn btn-primary" type="submit">Send</button>
-  </form>
-</div>
+    </form>
+  </div>
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-document.getElementById("header").innerHTML = header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    }
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>

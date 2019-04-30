@@ -92,7 +92,11 @@
   <div id="footer" class="row justify-content-*-center"></div>
 
   <script>
-    document.getElementById("header").innerHTML = header;
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    }
     document.getElementById("footer").innerHTML = footer;
   </script>
 

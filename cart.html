@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>MovieMax Shopping Cart</title>
   <meta charset="utf-8">
@@ -11,18 +12,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body class="bg-forms">
 
-<!-- Header from mmax.js -->
-<div id="header"></div>
+  <!-- Header from mmax.js -->
+  <div id="header"></div>
 
-<!-- Shopping Cart -->
-<div class="container col-sm-5 forms shadow p-3 mb-5 bg-white rounded">
+  <!-- Shopping Cart -->
+  <div class="container col-sm-5 forms shadow p-3 mb-5 bg-white rounded">
 
 
     <form action="checkout.html">
-    <h6><span class="gray">SHOPPING CART </span></h6><br>
-    <table class="table ">
+      <h6><span class="gray">SHOPPING CART </span></h6><br>
+      <table class="table ">
         <tr>
           <td><a href="movie.html">Movie Title (year)</a></td>
           <td>$9.99</td>
@@ -51,21 +53,26 @@
           <td colspan="2">$31.77</td>
         </tr>
       </table>
-  <button type="submit" class="btn btn-primary">Proceed to checkout</button>
-  </form>
-  <h6>or <a class="dashed" href="index.html">Continue shopping</a></h6>
+      <button type="submit" class="btn btn-primary">Proceed to checkout</button>
+    </form>
+    <h6>or <a class="dashed" href="index.html">Continue shopping</a></h6>
 
-</div>
+  </div>
 
 
 
-<!-- Default Footer with links from mmax.js-->
-<div id = "footer" class="row justify-content-*-center"></div>
+  <!-- Default Footer with links from mmax.js-->
+  <div id="footer" class="row justify-content-*-center"></div>
 
-<script>
-document.getElementById("header").innerHTML = forms_header;
-document.getElementById("footer").innerHTML = footer;
-</script>
+  <script>
+    if (loggedIn === 'true') {
+      document.getElementById("header").innerHTML = header_loggedIn;
+    } else {
+      document.getElementById("header").innerHTML = header;
+    }
+    document.getElementById("footer").innerHTML = footer;
+  </script>
 
 </body>
+
 </html>
