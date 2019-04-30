@@ -47,7 +47,6 @@ function getUserLibrary() {
 
                         var span = document.createElement('span');
                         span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
-                        span.style.fontWeight = 'bold';
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
@@ -56,7 +55,7 @@ function getUserLibrary() {
                         link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        col.appendChild(link)
+                        par.appendChild(link)
                         row1.appendChild(col)
                         j++
                     } else if (j < 8 && library.includes(data.movies[i].title)) {
@@ -75,7 +74,6 @@ function getUserLibrary() {
 
                         var span = document.createElement('span');
                         span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
-                        span.style.fontWeight = 'bold';
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
@@ -84,7 +82,7 @@ function getUserLibrary() {
                         link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        col.appendChild(link)
+                        par.appendChild(link)
                         row2.appendChild(col)
                         j++
                     }
