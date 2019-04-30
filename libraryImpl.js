@@ -1,7 +1,7 @@
-const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/all/';
+const library_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/all/';
 const app = document.getElementById('library');
 var movieList = [];
-const library = getOwned.split(', ')
+const library = userOwned.split(', ')
 
 function getLibrary() {
     if (userOwned.length > 0 || userRent.length > 0) {
@@ -21,7 +21,7 @@ function getLibrary() {
         container.appendChild(row2)
 
         var request = new XMLHttpRequest()
-        request.open('GET', movies_endpoint + 'a', true)
+        request.open('GET', library_endpoint + 'a', true)
 
         request.onload = function () {
             var data = JSON.parse(this.response);
