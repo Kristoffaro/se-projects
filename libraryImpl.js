@@ -4,12 +4,16 @@ function getLibrary() {
     var movieList = [];
 
     var libArray = userOwned.split(',')
+
+    const h1 = document.createElement('h1')
+    h1.textContent = 'Movies in Library'
+    container.appendChild(h1)
+
     const row1 = document.createElement('div')
     row1.setAttribute('class', 'row')
-    const row2 = document.createElement('div')
-    row2.setAttribute('class', 'row')
+
     container.appendChild(row1)
-    container.appendChild(row2)
+
 
     var j = 0;
 
