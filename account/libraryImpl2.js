@@ -53,9 +53,9 @@ function getUserLibrary() {
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
+                        link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        col.appendChild(span)
                         col.appendChild(link)
                         row1.appendChild(col)
                         j++
@@ -81,9 +81,9 @@ function getUserLibrary() {
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
+                        link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        col.appendChild(span)
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
