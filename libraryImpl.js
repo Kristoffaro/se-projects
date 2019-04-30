@@ -10,9 +10,9 @@ function getLibrary() {
         container.setAttribute('class', 'container')
         lib.appendChild(container)
 
-        const h1 = document.createElement('h1')
-        h1.textContent = 'Library'
-        container.appendChild(h1)
+        const h2 = document.createElement('h2')
+        h2.textContent = 'Library'
+        container.appendChild(h2)
 
         const row1 = document.createElement('div')
         row1.setAttribute('class', 'row')
