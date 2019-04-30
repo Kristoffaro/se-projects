@@ -22,38 +22,38 @@ function getLibrary() {
 
         var j = 0;
 
-        for (var i = 0; i < libArray.length; i++) { }
-        var request = new XMLHttpRequest()
-        request.open('GET', movies_endpoint + element, true)
-        request.onload = function () {
-            var data = JSON.parse(this.response);
-            if (request.status >= 200 && request.status < 400) {
-                movieList.push(data.movies[0])
-                if (j < 4) {
-                    const col = document.createElement('div')
-                    col.setAttribute('class', 'col')
+        for (var i = 0; i < libArray.length; i++) {
+            var request = new XMLHttpRequest()
+            request.open('GET', movies_endpoint + element, true)
+            request.onload = function () {
+                var data = JSON.parse(this.response);
+                if (request.status >= 200 && request.status < 400) {
+                    movieList.push(data.movies[0])
+                    if (j < 4) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col')
 
-                    const link = document.createElement('a')
-                    link.setAttribute('href', 'movie.html')
+                        const link = document.createElement('a')
+                        link.setAttribute('href', 'movie.html')
 
-                    link.onclick = (function () {
-                        var currentI = i;
-                        return function () {
-                            saveMovie(currentI + '');
-                        }
-                    })();
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
 
-                    const img = document.createElement('IMG')
-                    img.setAttribute('src', data.movies[0].poster)
-                    img.setAttribute('class', 'img-fluid')
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[0].poster)
+                        img.setAttribute('class', 'img-fluid')
 
-                    link.appendChild(img)
-                    col.appendChild(link)
-                    row1.appendChild(col)
+                        link.appendChild(img)
+                        col.appendChild(link)
+                        row1.appendChild(col)
+                    }
                 }
             }
+            request.send()
+            j++
         }
-        request.send()
-        j++
     }
-}
