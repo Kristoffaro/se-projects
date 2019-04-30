@@ -45,17 +45,13 @@ function getUserLibrary() {
                             }
                         })();
 
-                        var span = document.createElement('span');
-                        span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
-
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
-                        link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        par.appendChild(link)
+                        col.appendChild(link)
                         row1.appendChild(col)
                         j++
                     } else if (j < 8 && library.includes(data.movies[i].title)) {
@@ -72,17 +68,13 @@ function getUserLibrary() {
                             }
                         })();
 
-                        var span = document.createElement('span');
-                        span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
-
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
-                        link.appendChild(span)
                         link.appendChild(img)
                         col.appendChild(par)
-                        par.appendChild(link)
+                        col.appendChild(link)
                         row2.appendChild(col)
                         j++
                     }
