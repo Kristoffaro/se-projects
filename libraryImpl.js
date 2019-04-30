@@ -19,9 +19,6 @@ function getLibrary() {
 
         container.appendChild(row1)
 
-
-        var j = 0;
-
         for (var i = 0; i < libArray.length; i++) {
             var request = new XMLHttpRequest()
             request.open('GET', movies_endpoint + libArray[i].trim(), true)
@@ -29,7 +26,7 @@ function getLibrary() {
                 var data = JSON.parse(this.response);
                 if (request.status >= 200 && request.status < 400) {
                     movieList.push(data.movies[0])
-                    if (j < 4) {
+                    if (i < 4) {
                         const col = document.createElement('div')
                         col.setAttribute('class', 'col')
 
@@ -54,7 +51,6 @@ function getLibrary() {
                 }
             }
             request.send()
-            j++
         }
     }
 }
