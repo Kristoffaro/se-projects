@@ -36,8 +36,41 @@
       </div>
       <div class="form-group form-check">
       </div>
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-primary" onclick="createUser()">Register</button>
     </form>
+    <script>
+
+      // Post a user
+      const user_post_endpoint = "https://g7jn2eiov9.execute-api.us-east-2.amazonaws.com/prod-live/user/";
+
+      function createUser() {
+        var data = {};
+        data.UserName = document.getElementById('username').value;
+        data.Password = document.getElementById('pwd').value;
+        data.Email = document.getElementById('email').value;
+        data.CreditCard = "123";
+        data.Address = "asdf";
+        data.Owned = ", ";
+        data.Rented = ", ";
+        data.SearchHistory = ", ";
+        data.Favorite = ", ";
+        var json = JSON.stringify(data);
+
+        var request = new XMLHttpRequest();
+        request.open("POST", user_post_endpoint + data.UserName, true);
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        request.onload = function () {
+          var users = JSON.parse(request.responseText);
+          if (request.readyState == 4 && request.status == "201") {
+            console.table(users);
+          } else {
+            console.error(users);
+          }
+        }
+        request.send(json);
+        window.location.href = "/se-projects/login.html";
+      }
+    </script>
 
 
   </div>

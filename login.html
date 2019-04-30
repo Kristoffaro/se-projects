@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="mmax.css">
   <script src="mmax.js"></script>
-  <script src="loginImpl.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -27,7 +26,7 @@
         <label for="username">Username:</label>
         <input type="text" class="form-control" id="username" placeholder="Enter username">
       </div>
-      <div class="form-group">
+      <div class="form-group" id="wrongPass">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd" placeholder="Enter password">
       </div>
@@ -36,6 +35,7 @@
           <input class="form-check-input" type="checkbox" name="remember"> Remember me
         </label>
       </div>
+      <script src="loginImpl.js"></script>
       <button class="btn btn-primary"
         onclick="validateLogin(document.getElementById('username').value, document.getElementById('pwd').value)">Log
         In</button>

@@ -1,5 +1,5 @@
 const user_endpoint = 'https://g7jn2eiov9.execute-api.us-east-2.amazonaws.com/prod-live/user/'
-
+const wrongPassElement = document.getElementById('wrongPass')
 function validateLogin(username, pwd) {
     var request = new XMLHttpRequest()
     request.open('GET', user_endpoint + username, true)
@@ -13,7 +13,10 @@ function validateLogin(username, pwd) {
                 localStorage.setItem('userRented', data.user[0].Rented)
                 window.location.href = '/se-projects/index.html'
             } else {
-                document.getElementById('username').value = 'Bad Password'
+                const wrong = document.createElement('div')
+                wrong.innerHTML = 'Password incorrect. Please try again'
+
+                wrongPassElement.appendChild(wrong)
             }
         } else {
             console.log('Error')
