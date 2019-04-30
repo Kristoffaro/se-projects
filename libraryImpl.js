@@ -5,7 +5,7 @@ const ownedLib = userOwned.split(', ')
 const library = ownedLib.concat(userRented.split(', '))
 
 function getLibrary() {
-    if (userOwned.length > 0 || userRent.length > 0) {
+    if (library.length > 0) {
         const container = document.createElement('div')
         container.setAttribute('class', 'container')
         lib.appendChild(container)
