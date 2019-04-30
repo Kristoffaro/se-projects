@@ -54,8 +54,8 @@
           <script>
             const buttons = document.getElementById('buttonsForPurchase')
             const ownedLibrary = userOwned.split(', ')
-            const libOwnedAndRented = ownedLib.concat(userRented.split(', '))
-            if (loggedIn === 'true' && (libOwnedAndRented.includes(movieTitle))) {
+            const libOwnedAndRented = ownedLibrary.concat(userRented.split(', '))
+            if (loggedIn === 'true' && libOwnedAndRented.includes(movieTitle)) {
               const streamButton = document.createElement('BUTTON')
               streamButton.setAttribute('class', 'btn btn-danger buy')
               streamButton.setAttribute('type', 'submit')
