@@ -37,7 +37,7 @@ function getUserLibrary() {
                         const par = document.createElement('p')
                         par.setAttribute('class', 'library')
                         const link = document.createElement('a')
-                        link.setAttribute('href', 'movie.html')
+                        link.setAttribute('href', '../movie.html')
                         link.onclick = (function () {
                             var currentI = i;
                             return function () {
@@ -60,7 +60,7 @@ function getUserLibrary() {
                         const par = document.createElement('p')
                         par.setAttribute('class', 'library')
                         const link = document.createElement('a')
-                        link.setAttribute('href', 'movie.html')
+                        link.setAttribute('href', '../movie.html')
                         link.onclick = (function () {
                             var currentI = i;
                             return function () {
