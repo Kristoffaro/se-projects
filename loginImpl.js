@@ -13,7 +13,7 @@ function validateLogin(username, pwd) {
                 localStorage.setItem('userRented', data.user[0].Rented)
                 window.location.href = '/se-projects/index.html'
             } else {
-                document.getElementById('username').value = 'Bad Password or Username'
+                document.getElementById('username').value = 'Bad Password'
             }
         } else {
             console.log('Error')
