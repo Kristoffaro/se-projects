@@ -1,9 +1,13 @@
 function getLibrary() {
-    const container = document.getElementById('library')
+    const app = document.getElementById('library')
     const movies_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com/prod-live/movies/'
     var movieList = [];
 
     var libArray = userOwned.split(',')
+
+    const container = document.createElement('div')
+    container.setAttribute('class', 'container')
+    app.appendChild(container)
 
     const h1 = document.createElement('h1')
     h1.textContent = 'Movies in Library'
