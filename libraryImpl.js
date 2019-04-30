@@ -34,7 +34,7 @@ function getLibrary() {
                         link.setAttribute('href', 'movie.html')
 
                         link.onclick = (function () {
-                            var currentI = j;
+                            var currentI = i;
                             return function () {
                                 saveMovie(currentI + '');
                             }
