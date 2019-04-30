@@ -5,7 +5,7 @@ var header = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">' +
     '"form-control mr-sm-2  col-sm-8" type="text" id="query" name="query" placeholder="Search movie">' +
     '<button class="btn btn-primary" type="submit">Search</button> </form>' +
     '<ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="login.html">' +
-    'Log in</a> </li> <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a>' +
+    'Log in</a>' +
     '</li></ul></nav>'
 
 // default footer for all pages
@@ -34,8 +34,7 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     'My account</a><div class="dropdown-menu">' +
     '<a class="dropdown-item" href="/se-projects/account/edit.html">Edit profile</a>' +
     '<a class="dropdown-item" href="/se-projects/account/library.html">Movie library</a>' +
-    '<a class="dropdown-item" onclick="logOut()">Log Out</a></div></li>' +
-    '<li class="nav-item"><a class="nav-link" href="/se-projects/cart.html">Cart</a>' +
+    '<a class="dropdown-item" href="/se-projects/index.html" onclick="logOut()">Log Out</a></div>' +
     '</li></ul></nav>'
 
 var loggedIn = localStorage.getItem("loggedIn");
@@ -122,5 +121,4 @@ function logOut() {
     localStorage.setItem("userId", "")
     localStorage.setItem("userOwned", "")
     localStorage.setItem("userRented", "")
-    window.location.href = "/se-projects/index.html"
 }
