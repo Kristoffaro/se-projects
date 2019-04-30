@@ -2,6 +2,7 @@ const library_endpoint = 'https://j0l1npgx02.execute-api.us-east-2.amazonaws.com
 const lib = document.getElementById('library');
 var movieList = [];
 const library = userOwned.split(', ')
+library.concat(userRented.split(', '))
 
 function getLibrary() {
     if (userOwned.length > 0 || userRent.length > 0) {
