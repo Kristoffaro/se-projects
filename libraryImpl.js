@@ -24,7 +24,7 @@ function getLibrary() {
 
         for (var i = 0; i < libArray.length; i++) {
             var request = new XMLHttpRequest()
-            request.open('GET', movies_endpoint + libArray[i], true)
+            request.open('GET', movies_endpoint + libArray[i].trim(), true)
             request.onload = function () {
                 var data = JSON.parse(this.response);
                 if (request.status >= 200 && request.status < 400) {
@@ -37,7 +37,7 @@ function getLibrary() {
                         link.setAttribute('href', 'movie.html')
 
                         link.onclick = (function () {
-                            var currentI = i;
+                            var currentI = j;
                             return function () {
                                 saveMovie(currentI + '');
                             }
