@@ -44,7 +44,7 @@ function getMovies() {
 
                     const img = document.createElement('IMG')
                     img.setAttribute('src', data.movies[i].poster)
-                    img.setAttribute('class', 'img-fluid')
+                    img.setAttribute('class', 'img-fluid2')
 
                     link.appendChild(img)
                     col.appendChild(link)
@@ -65,7 +65,7 @@ function getMovies() {
 
                     const img = document.createElement('IMG')
                     img.setAttribute('src', data.movies[i].poster)
-                    img.setAttribute('class', 'img-fluid')
+                    img.setAttribute('class', 'img-fluid2')
 
                     link.appendChild(img)
                     col.appendChild(link)

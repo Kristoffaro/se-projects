@@ -46,7 +46,7 @@ function getLibrary() {
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
-                        img.setAttribute('class', 'img-fluid')
+                        img.setAttribute('class', 'img-fluid2')
 
                         link.appendChild(img)
                         col.appendChild(link)
@@ -67,7 +67,7 @@ function getLibrary() {
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
-                        img.setAttribute('class', 'img-fluid')
+                        img.setAttribute('class', 'img-fluid2')
 
                         link.appendChild(img)
                         col.appendChild(link)
