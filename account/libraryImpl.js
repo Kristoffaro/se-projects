@@ -10,9 +10,9 @@ function getLibrary() {
         container.setAttribute('class', 'container')
         lib.appendChild(container)
 
-        const h1 = document.createElement('h2')
-        h1.textContent = 'Library'
-        container.appendChild(h1)
+        const h2 = document.createElement('h2')
+        h2.textContent = 'Library'
+        container.appendChild(h2)
 
         const row1 = document.createElement('div')
         row1.setAttribute('class', 'row')
@@ -34,7 +34,8 @@ function getLibrary() {
                     if (j < 4 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
                         col.setAttribute('class', 'col')
-
+                        const par = document.createElement('p')
+                        par.setAttribute('class', 'library')
                         const link = document.createElement('a')
                         link.setAttribute('href', 'movie.html')
                         link.onclick = (function () {
@@ -49,13 +50,15 @@ function getLibrary() {
                         img.setAttribute('class', 'img-fluid')
 
                         link.appendChild(img)
+                        col.appendChild(par)
                         col.appendChild(link)
                         row1.appendChild(col)
                         j++
                     } else if (j < 8 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
                         col.setAttribute('class', 'col')
-
+                        const par = document.createElement('p')
+                        par.setAttribute('class', 'library')
                         const link = document.createElement('a')
                         link.setAttribute('href', 'movie.html')
                         link.onclick = (function () {
@@ -70,6 +73,7 @@ function getLibrary() {
                         img.setAttribute('class', 'img-fluid')
 
                         link.appendChild(img)
+                        col.appendChild(par)
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
