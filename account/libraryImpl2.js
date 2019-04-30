@@ -45,11 +45,15 @@ function getUserLibrary() {
                             }
                         })();
 
+                        const h3 = document.createElement('h3')
+                        h3.textContent = data.movies[i].title + ' (' + data.movies[i].year + ')'
+
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
                         link.appendChild(img)
+                        col.appendChild(h3)
                         col.appendChild(par)
                         col.appendChild(link)
                         row1.appendChild(col)
@@ -68,12 +72,16 @@ function getUserLibrary() {
                             }
                         })();
 
+                        const h3 = document.createElement('h3')
+                        h3.textContent = data.movies[i].title + ' (' + data.movies[i].year + ')'
+
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
                         link.appendChild(img)
                         col.appendChild(par)
+                        col.appendChild(h3)
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
