@@ -45,16 +45,17 @@ function getUserLibrary() {
                             }
                         })();
 
-                        const h3 = document.createElement('h3')
-                        h3.textContent = data.movies[i].title + ' (' + data.movies[i].year + ')'
+                        var span = document.createElement('span');
+                        span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
+                        span.style.fontWeight = 'bold';
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
                         img.setAttribute('class', 'img-fluid')
 
                         link.appendChild(img)
-                        col.appendChild(h3)
                         col.appendChild(par)
+                        col.appendChild(span)
                         col.appendChild(link)
                         row1.appendChild(col)
                         j++
@@ -72,8 +73,9 @@ function getUserLibrary() {
                             }
                         })();
 
-                        const h3 = document.createElement('h3')
-                        h3.textContent = data.movies[i].title + ' (' + data.movies[i].year + ')'
+                        var span = document.createElement('span');
+                        span.innerHTML = data.movies[i].title + ' (' + data.movies[i].year + ')'
+                        span.style.fontWeight = 'bold';
 
                         const img = document.createElement('IMG')
                         img.setAttribute('src', data.movies[i].poster)
@@ -81,7 +83,7 @@ function getUserLibrary() {
 
                         link.appendChild(img)
                         col.appendChild(par)
-                        col.appendChild(h3)
+                        col.appendChild(span)
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
