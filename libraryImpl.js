@@ -115,7 +115,7 @@ function getLibrary() {
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
-                    } else if (j < 24 && library.includes(data.movies[i].title)) {
+                    } else if (j < 20 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
                         col.setAttribute('class', 'col2')
 
