@@ -11,9 +11,10 @@ function init() {
 
         // execute request
         request.execute(function (response) {
+            var results = response.result;
             console.log(movieTitle.concat(' trailer'));
             console.log(response);
-            $("results").append(result.items[0].id.videoId + ' ' + result.items[0].snippet.title);
+            $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
 }
