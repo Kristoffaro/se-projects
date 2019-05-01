@@ -33,7 +33,7 @@ function getLibrary() {
                     movieList.push(data.movies[i])
                     if (j < 4 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
-                        col.setAttribute('class', 'col')
+                        col.setAttribute('class', 'col2')
 
                         const link = document.createElement('a')
                         link.setAttribute('href', 'movie.html')
@@ -54,7 +54,7 @@ function getLibrary() {
                         j++
                     } else if (j < 8 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
-                        col.setAttribute('class', 'col')
+                        col.setAttribute('class', 'col2')
 
                         const link = document.createElement('a')
                         link.setAttribute('href', 'movie.html')

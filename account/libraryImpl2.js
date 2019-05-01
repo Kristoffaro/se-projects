@@ -31,9 +31,9 @@ function getUserLibrary() {
                 for (var i = 0; i < data.movies.length; i++) {
 
                     movieList.push(data.movies[i])
-                    if (j < 4 && library.includes(data.movies[i].title)) {
+                    if (j < 6 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
-                        col.setAttribute('class', 'col')
+                        col.setAttribute('class', 'col2')
                         const par = document.createElement('p')
                         par.setAttribute('class', 'library')
                         const link = document.createElement('a')
@@ -54,9 +54,55 @@ function getUserLibrary() {
                         col.appendChild(link)
                         row1.appendChild(col)
                         j++
-                    } else if (j < 8 && library.includes(data.movies[i].title)) {
+                    } else if (j < 12 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
-                        col.setAttribute('class', 'col')
+                        col.setAttribute('class', 'col2')
+                        const par = document.createElement('p')
+                        par.setAttribute('class', 'library')
+                        const link = document.createElement('a')
+                        link.setAttribute('href', '../movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(par)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
+                    } else if (j < 18 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
+                        const par = document.createElement('p')
+                        par.setAttribute('class', 'library')
+                        const link = document.createElement('a')
+                        link.setAttribute('href', '../movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(par)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
+                    } else if (j < 24 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
                         const par = document.createElement('p')
                         par.setAttribute('class', 'library')
                         const link = document.createElement('a')
