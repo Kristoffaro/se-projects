@@ -135,9 +135,9 @@
               data.Email = userEmail;
               data.CreditCard = userCred;
               data.Address = userAddress;
-              data.Owned = userOwned + movieTitle + ", ";
+              data.Owned = userOwned.concat(", " + movieTitle);
               data.Rented = userRented;
-              data.SearcHistory = userSearched;
+              data.SearchHistory = userSearched;
               data.Favorite = userFav;
 
               var json = JSON.stringify(data);
@@ -151,12 +151,11 @@
                   console.table(users);
                 } else {
                   console.error(users);
-                  console.error(userId + '--' + userPass + '--' + userEmail + '--' + userCred + '--' + userAddress + '--' + userSearched + '--' + userFav + '--' + movieTitle);
                 }
               }
               request.send(json);
               request.onloadend = function () {
-                //window.location.href = "./account/library.html";
+                window.location.href = "./account/library.html";
               }
             }
           </script>
