@@ -5,7 +5,8 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(movieTitle.concat('+' + movieYear + '+trailer')),
+            q: encodeURIComponent(movieTitle),
+            //q: encodeURIComponent(movieTitle.concat('+' + movieYear + '+trailer')),
             maxResults: 1
         });
 
