@@ -13,6 +13,7 @@ function init() {
         // execute request
         request.execute(function (response) {
             var results = response.result;
+            console.log(search);
             $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
