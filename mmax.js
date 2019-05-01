@@ -51,7 +51,7 @@ var userEmail = localStorage.getItem("userEmail");
 var lastSearched = localStorage.getItem("lastSearched");
 var lastType = localStorage.getItem("lastType");
 var movieTitle = localStorage.getItem("movieTitle");
-var movieTrailer = localStorage.getItem("movieTrailer");
+var movieTrailer = localStorage.getItem("movieTrailer").concat(" trailer");
 var movieActors = localStorage.getItem("movieActors");
 var movieDirector = localStorage.getItem("movieDirector");
 var moviePoster = localStorage.getItem("moviePoster");
@@ -107,7 +107,7 @@ function toTitleCase(str) {
 function saveMovie(current) {
     var movie = parseInt(current);
     localStorage.setItem("movieTitle", movieList[movie].title);
-    localStorage.setItem("movieTrailer", movieList[movie].title + ' trailer');
+    localStorage.setItem("movieTrailer", movieList[movie].title);
     localStorage.setItem("movieActors", movieList[movie].actors);
     localStorage.setItem("movieDirector", movieList[movie].director);
     localStorage.setItem("moviePoster", movieList[movie].poster);
