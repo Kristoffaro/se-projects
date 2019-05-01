@@ -20,12 +20,12 @@
 
   <!-- Movie details -->
   <div class="container">
-    <h2 class="stream"><script>document.write(movieTitle + '(' + movieYear +')')</script>
-      <small><script>document.write(movieRating + ' ' + movieRuntime)</script></small></h2>
-    <form action="#" method="get">
-      <p class="stream">rental expires <mark>05/01/19</mark> <button class="btn btn-danger extend" type="submit">extend
-          rental or purchase</button></p>
-    </form>
+    <h2 class="stream">
+      <script>document.write(movieTitle + '(' + movieYear + ')')</script>
+      <small>
+        <script>document.write(movieRating + ' ' + movieRuntime)</script>
+      </small>
+    </h2>
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen></iframe>
     </div>
@@ -39,8 +39,8 @@
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <script src="streamImpl.js"></script>
   <script src="https://apis.google.com/js/client.js?onload=init"></script>
-  
-  
+
+
   <!-- Default Footer with links from mmax.js-->
   <div id="footer" class="row justify-content-*-center"></div>
 
