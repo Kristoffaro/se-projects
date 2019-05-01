@@ -8,9 +8,7 @@ function validateLogin(username, pwd) {
         if (request.status >= 200 && request.status < 400) {
             if (data.user[0].Password === pwd) {
                 localStorage.setItem('loggedIn', 'true')
-                localStorage.setItem('userId', data.user[0].UserName)
-                localStorage.setItem('userOwned', data.user[0].Owned)
-                localStorage.setItem('userRented', data.user[0].Rented)
+                saveUser(data.user[0])
                 window.location.href = '/se-projects/index.html'
             } else {
                 const wrong = document.createElement('div')

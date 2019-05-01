@@ -39,8 +39,15 @@ var header_loggedIn = '<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
 var loggedIn = localStorage.getItem("loggedIn");
 var userId = localStorage.getItem("userId");
+var userPass = localStorage.getItem("userPass");
 var userOwned = localStorage.getItem("userOwned");
 var userRented = localStorage.getItem("userRented");
+var userAddress = localStorage.getItem("userAddress");
+var userSearched = localStorage.getItem("userSearched");
+var userCred = localStorage.getItem("userCred");
+var userFav = localStorage.getitem("userFav");
+var userEmail = localStorage.getItem("userEmail");
+
 var lastSearched = localStorage.getItem("lastSearched");
 var lastType = localStorage.getItem("lastType");
 var movieTitle = localStorage.getItem("movieTitle");
@@ -110,6 +117,18 @@ function saveMovie(current) {
     localStorage.setItem("movieRuntime", movieList[movie].runtime);
     localStorage.setItem("movieBuy", movieList[movie].priceBuy);
     localStorage.setItem("movieRent", movieList[movie].priceRent);
+}
+
+function saveUser(user) {
+    localStorage.setItem("userId", user.UserName);
+    localStorage.setItem("userPass", user.Password);
+    localStorage.setItem("userEmail", user.Email);
+    localStorage.setItem("userCred", user.CreditCard);
+    localStorage.setItem("userAddress", user.Address);
+    localStorage.setItem("userOwned", user.Owned);
+    localStorage.setItem("userRented", user.Rented);
+    localStorage.setItem("userSearched", user.SearchHistory);
+    localStorage.setItem("userFav", user.Favorite);
 }
 
 function logOut() {

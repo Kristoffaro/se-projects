@@ -123,7 +123,7 @@
 
 
 
-          <button type="submit" class="btn btn-primary" onclick="updateUserOwned()">Place Order</button>
+          <button type="button" class="btn btn-primary" onclick="updateUserOwned()">Place Order</button>
 
           <script>
             const user_post_endpoint = "https://g7jn2eiov9.execute-api.us-east-2.amazonaws.com/prod-live/user/";
@@ -131,7 +131,15 @@
             function updateUserOwned() {
               var data = {};
               data.UserName = userId;
-              data.Owned = ", " + movieTitle;
+              data.Password = userPass;
+              data.Email = userEmail;
+              data.CreditCard = userCred;
+              data.Address = userAddress;
+              data.Owned = userOwned + ", " + movieTitle;
+              data.Rented = userRented;
+              data.Searchistory = userSearched;
+              data.Favorite = userFav;
+
               var json = JSON.stringify(data);
 
               var request = new XMLHttpRequest();
@@ -146,7 +154,9 @@
                 }
               }
               request.send(json);
-              window.location.href = "/se-projects/login.html";
+              request.onloadend = function () {
+                window.location.href = "/account/library.html";
+              }
             }
           </script>
 
