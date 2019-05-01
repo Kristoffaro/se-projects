@@ -12,7 +12,7 @@ function init() {
         // execute request
         request.execute(function (response) {
             var results = response.result;
-            console.log(results.items.item);
+            console.log(results.items[0]);
         });
     });
 }
