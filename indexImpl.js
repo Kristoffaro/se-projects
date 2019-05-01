@@ -31,7 +31,7 @@ function getMovies() {
                 movieList.push(data.movies[i])
                 if (j < 4 && data.movies[i].year === '2016') {
                     const col = document.createElement('div')
-                    col.setAttribute('class', 'col')
+                    col.setAttribute('class', 'col2')
 
                     const link = document.createElement('a')
                     link.setAttribute('href', 'movie.html')
@@ -52,7 +52,7 @@ function getMovies() {
                     j++
                 } else if (j < 8 && data.movies[i].year === '2016') {
                     const col = document.createElement('div')
-                    col.setAttribute('class', 'col')
+                    col.setAttribute('class', 'col2')
 
                     const link = document.createElement('a')
                     link.setAttribute('href', 'movie.html')
