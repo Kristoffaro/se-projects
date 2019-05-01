@@ -8,14 +8,14 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(movieTrailer),
+            q: movieTrailer + ' Trailer',
             maxResults: 1
         });
 
         // execute request
         request.execute(function (response) {
             var results = response.result;
-            console.log(movieTrailer);
+            console.log(movieTrailer + ' Trailer');
             console.log(response);
             resultsApp.src="https://www.youtube.com/embed/" + results.items[0].id.videoId;
         });
