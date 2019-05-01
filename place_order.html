@@ -155,6 +155,7 @@
               }
               request.send(json);
               request.onloadend = function () {
+                localStorage.setItem("userOwned", userOwned.concat(", " + movieTitle));
                 window.location.href = "./account/library.html";
               }
             }
