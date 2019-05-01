@@ -5,15 +5,15 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(movieTitle),
+            q: encodeURIComponent(movieTitle.concat(' trailer')),
             maxResults: 1
         });
 
         // execute request
         request.execute(function (response) {
-            console.log(movieTitle);
+            console.log(movieTitle.concat(' trailer'));
             console.log(response);
-            $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
+            $("results").append(result.items[0].id.videoId + ' ' + result.items[0].snippet.title);
         });
     });
 }
