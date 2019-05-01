@@ -106,6 +106,7 @@ function toTitleCase(str) {
 function saveMovie(current) {
     var movie = parseInt(current);
     localStorage.setItem("movieTitle", movieList[movie].title);
+    localStorage.setItem("movieTrailer", movieList[movie].title + ' trailer');
     localStorage.setItem("movieActors", movieList[movie].actors);
     localStorage.setItem("movieDirector", movieList[movie].director);
     localStorage.setItem("moviePoster", movieList[movie].poster);
