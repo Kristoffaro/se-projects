@@ -2,7 +2,7 @@ function init() {
     gapi.client.setApiKey("AIzaSyBmyogOtizklthGZI6j9_XFRgX7tvaNxFI");
     gapi.client.load("youtube", "v3", function () {
         // prepare request
-        var search = movieTitle.concat(' trailer ' + movieYear)
+        var search = movieTitle.concat(' trailer')
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
