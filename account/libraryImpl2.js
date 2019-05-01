@@ -18,8 +18,19 @@ function getUserLibrary() {
         row1.setAttribute('class', 'row')
         const row2 = document.createElement('div')
         row2.setAttribute('class', 'row')
+        const row3 = document.createElement('div')
+        row3.setAttribute('class', 'row')
+        const row4 = document.createElement('div')
+        row4.setAttribute('class', 'row')
+        const row5 = document.createElement('div')
+        row5.setAttribute('class', 'row')
+
         container.appendChild(row1)
         container.appendChild(row2)
+        container.appendChild(row3)
+        container.appendChild(row4)
+        container.appendChild(row5)
+
 
         var request = new XMLHttpRequest()
         request.open('GET', library_endpoint + 'a', true)
@@ -98,7 +109,7 @@ function getUserLibrary() {
                         link.appendChild(img)
                         col.appendChild(par)
                         col.appendChild(link)
-                        row2.appendChild(col)
+                        row3.appendChild(col)
                         j++
                     } else if (j < 32 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
@@ -121,7 +132,7 @@ function getUserLibrary() {
                         link.appendChild(img)
                         col.appendChild(par)
                         col.appendChild(link)
-                        row2.appendChild(col)
+                        row4.appendChild(col)
                         j++
                     } else if (j < 40 && library.includes(data.movies[i].title)) {
                         const col = document.createElement('div')
@@ -144,7 +155,7 @@ function getUserLibrary() {
                         link.appendChild(img)
                         col.appendChild(par)
                         col.appendChild(link)
-                        row2.appendChild(col)
+                        row5.appendChild(col)
                         j++
                     }
                 }
