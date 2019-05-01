@@ -1,6 +1,5 @@
 function tplawesome(e,t){res=e;for(var n=0;n<t.length;n++){res=res.replace(/\{\{(.*?)\}\}/g,function(e,r){return t[n][r]})}return res}
 const resultsApp = document.getElementById('videoPlayer');
-var searchString = movieTitle.concat(' trailer')
 
 function init() {
     gapi.client.setApiKey("AIzaSyBmyogOtizklthGZI6j9_XFRgX7tvaNxFI");
@@ -9,7 +8,7 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(searchString),
+            q: encodeURIComponent(movieTitle),
             maxResults: 1
         });
 
