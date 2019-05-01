@@ -24,24 +24,64 @@
     <form action="#">
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
       </div>
       <div class="form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
       </div>
       <div class="form-group">
         <label for="cardAdd1">Billing address:</label>
-        <input type="text" class="form-control" id="cardAdd1" placeholder="address line 1" name="cardAdd1">
-        <input type="text" class="form-control my-2" id="cardAdd2" placeholder="address line 2" name="cardAdd2">
+        <input type="text" class="form-control" id="cardAdd1" placeholder="address line 1">
       </div>
       <div class="form-group form-check">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary" onclick="updateUser()">Submit</button>
     </form>
     <br>
 
   </div>
+
+  <script>
+      const user_post_endpoint = "https://g7jn2eiov9.execute-api.us-east-2.amazonaws.com/prod-live/user/";
+      const emailObj = document.getElementById('email');
+      emailObj.setAttribute('placeholder', userEmail);
+      const passObj = document.getElementById('pwd');
+      passObj.setAttribute('placeholder', userPass);
+      const addressObj = document.getElementById('cardAdd1');
+      addressObj.setAttribute('placeholder', userAddress);
+
+      function updateUser() {
+        var data = {};
+        data.UserName = userId;
+        data.Password = passObj.value;
+        data.Email = emailObj.value;
+        data.CreditCard = userCred;
+        data.Address = addressObj.value;
+        data.Owned = userOwned;
+        data.Rented = userRented;
+        data.SearchHistory = userSearched;
+        data.Favorite = userFav;
+
+        var json = JSON.stringify(data);
+
+        var request = new XMLHttpRequest();
+        request.open("POST", user_post_endpoint + data.UserName, true);
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        request.onload = function () {
+          var users = JSON.parse(request.responseText);
+          if (request.readyState == 4 && request.status == "201") {
+            console.table(users);
+          } else {
+            console.error(users);
+          }
+        }
+        request.send(json);
+        request.onloadend = function () {
+          window.location.href = "../login.html";
+        }
+      }
+    </script>
 
 
   <!-- Default Footer with links from mmax.js-->
