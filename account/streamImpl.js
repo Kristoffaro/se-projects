@@ -14,7 +14,8 @@ function init() {
         request.execute(function (response) {
             var results = response.result;
             console.log(search.replace(/\s/g, "+"));
-            $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
+            console.log(results.items[0]);
+            //$("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
 }
