@@ -6,8 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/se-projects/mmax.css">
-  <script src="/se-projects/mmax.js"></script>
+  <link rel="stylesheet" href="../mmax.css">
+  <script src="../mmax.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -25,7 +25,7 @@
       <p class="stream">rental expires <mark>05/01/19</mark> <button class="btn btn-danger extend" type="submit">extend
           rental or purchase</button></p>
     </form>
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-16by9" id="youtubeResults">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vKQi3bBA1y8"></iframe>
     </div>
     <div>
@@ -33,6 +33,30 @@
     </div>
 
   </div>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  <script>
+    const appResults = document.getElementById('youtubeResults');
+    // prepare request
+    var request = gapi.client.youtube.search.list({
+      part: "snippet",
+      type: "video",
+      q: encodeURIComponent(movieTitle + '+' + movieYear + '+trailer'),
+      maxResults: 1,
+      order: "viewCount"
+    });
+    // execute request
+    request.execute(function(response){
+      console.log(response);
+    });
+
+    function init() {
+      gapi.client.setApiKey("AIzaSyBmyogOtizklthGZI6j9_XFRgX7tvaNxFI");
+      gapi.client.load("youtube", "v3", function () {
+        // youtube API ready
+      });
+    }
+  </script>
 
   <!-- Default Footer with links from mmax.js-->
   <div id="footer" class="row justify-content-*-center"></div>
