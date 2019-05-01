@@ -8,7 +8,7 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(movieTrailer.replace(/-/g, ' ')),
+            q: encodeURIComponent(movieTrailer + 'trailer'),
             maxResults: 1
         });
 
