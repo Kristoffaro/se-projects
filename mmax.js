@@ -45,7 +45,7 @@ var userRented = localStorage.getItem("userRented");
 var userAddress = localStorage.getItem("userAddress");
 var userSearched = localStorage.getItem("userSearched");
 var userCred = localStorage.getItem("userCred");
-var userFav = localStorage.getitem("userFav");
+var userFav = localStorage.getItem("userFav");
 var userEmail = localStorage.getItem("userEmail");
 
 var lastSearched = localStorage.getItem("lastSearched");
@@ -136,4 +136,11 @@ function logOut() {
     localStorage.setItem("userId", "")
     localStorage.setItem("userOwned", "")
     localStorage.setItem("userRented", "")
+    localStorage.setItem("userPass", "");
+    localStorage.setItem("userEmail", "");
+    localStorage.setItem("userCred", "");
+    localStorage.setItem("userAddress", "");
+    localStorage.setItem("userSearched", "");
+    localStorage.setItem("userFav", "");
+
 }
