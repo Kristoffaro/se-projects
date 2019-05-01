@@ -13,7 +13,7 @@ function init() {
         request.execute(function (response) {
             console.log(movieTitle);
             console.log(response);
-            //$("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
+            $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
 }
