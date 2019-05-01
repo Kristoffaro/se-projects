@@ -1,3 +1,5 @@
+const resultsApp = document.getElementById('results');
+
 function init() {
     gapi.client.setApiKey("AIzaSyBmyogOtizklthGZI6j9_XFRgX7tvaNxFI");
     gapi.client.load("youtube", "v3", function () {
@@ -14,7 +16,7 @@ function init() {
             var results = response.result;
             console.log(movieTitle);
             console.log(response);
-            $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
+            resultsApp.innerHTML = results.items[0].id.videoId + ' ' + results.items[0].snippet.title;
         });
     });
 }
