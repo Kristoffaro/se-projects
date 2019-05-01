@@ -6,14 +6,14 @@ function init() {
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(search.replace(/%20/g, '+')),
+            q: encodeURIComponent(search.replace(/\s/g, "+")),
             maxResults: 1
         });
 
         // execute request
         request.execute(function (response) {
             var results = response.result;
-            console.log(search.replace(/%20/g, '+'));
+            console.log(search.replace(/\s/g, "+"));
             $("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
