@@ -51,5 +51,5 @@ a.dashed:hover {text-decoration: none; color:#000;}
 #footer li {color: #464646; margin:7px 25px;}
 #footer p {margin-left:25px;}
 
-.col {padding: 5px; max-width: 260px; float: left}
+.col {padding: 5px}
 .img-fluid2 {max-height: 370px}
