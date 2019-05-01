@@ -123,7 +123,32 @@
 
 
 
-          <button type="submit" class="btn btn-primary">Place Order</button>
+          <button type="submit" class="btn btn-primary" onclick="updateUserOwned()">Place Order</button>
+
+          <script>
+            const user_post_endpoint = "https://g7jn2eiov9.execute-api.us-east-2.amazonaws.com/prod-live/user/";
+
+            function updateUserOwned() {
+              var data = {};
+              data.UserName = userId;
+              data.Owned = ", " + movieTitle;
+              var json = JSON.stringify(data);
+
+              var request = new XMLHttpRequest();
+              request.open("POST", user_post_endpoint + data.UserName, true);
+              request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+              request.onload = function () {
+                var users = JSON.parse(request.responseText);
+                if (request.readyState == 4 && request.status == "201") {
+                  console.table(users);
+                } else {
+                  console.error(users);
+                }
+              }
+              request.send(json);
+              window.location.href = "/se-projects/login.html";
+            }
+          </script>
 
           * By placing this order, you agree to the <a class="dashed" href="/se-projects/terms.html">
             Terms of Use</a> and <a class="dashed" href="/se-projects/privacy.html">Privacy Policy</a>
