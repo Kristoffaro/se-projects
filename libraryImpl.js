@@ -73,6 +73,69 @@ function getLibrary() {
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
+                    } else if (j < 12 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
+
+                        const link = document.createElement('a')
+                        link.setAttribute('href', 'movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
+                    } else if (j < 16 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
+
+                        const link = document.createElement('a')
+                        link.setAttribute('href', 'movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
+                    } else if (j < 24 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
+
+                        const link = document.createElement('a')
+                        link.setAttribute('href', 'movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
                     }
                 }
             } else {

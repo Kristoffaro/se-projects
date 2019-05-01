@@ -123,6 +123,29 @@ function getUserLibrary() {
                         col.appendChild(link)
                         row2.appendChild(col)
                         j++
+                    } else if (j < 32 && library.includes(data.movies[i].title)) {
+                        const col = document.createElement('div')
+                        col.setAttribute('class', 'col2')
+                        const par = document.createElement('p')
+                        par.setAttribute('class', 'library')
+                        const link = document.createElement('a')
+                        link.setAttribute('href', '../movie.html')
+                        link.onclick = (function () {
+                            var currentI = i;
+                            return function () {
+                                saveMovie(currentI + '');
+                            }
+                        })();
+
+                        const img = document.createElement('IMG')
+                        img.setAttribute('src', data.movies[i].poster)
+                        img.setAttribute('class', 'img-fluid2')
+
+                        link.appendChild(img)
+                        col.appendChild(par)
+                        col.appendChild(link)
+                        row2.appendChild(col)
+                        j++
                     }
                 }
             } else {
