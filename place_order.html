@@ -137,7 +137,7 @@
               data.Address = userAddress;
               data.Owned = userOwned + movieTitle + ", ";
               data.Rented = userRented;
-              data.Searchistory = userSearched;
+              data.SearcHistory = userSearched;
               data.Favorite = userFav;
 
               var json = JSON.stringify(data);
@@ -155,7 +155,7 @@
               }
               request.send(json);
               request.onloadend = function () {
-                //window.location.href = "./account/library.html";
+                window.location.href = "./account/library.html";
               }
             }
           </script>
