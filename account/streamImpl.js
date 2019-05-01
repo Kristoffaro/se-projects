@@ -5,18 +5,17 @@ function init() {
     gapi.client.setApiKey("AIzaSyBmyogOtizklthGZI6j9_XFRgX7tvaNxFI");
     gapi.client.load("youtube", "v3", function () {
         // prepare request
-        var searchTerm = movieTrailer + ' trailer';
         var request = gapi.client.youtube.search.list({
             part: "snippet",
             type: "video",
-            q: encodeURIComponent(searchTerm),
+            q: encodeURIComponent(movieTrailer),
             maxResults: 1
         });
 
         // execute request
         request.execute(function (response) {
             var results = response.result;
-            console.log(searchTerm);
+            console.log(movieTrailer);
             console.log(response);
             resultsApp.src="https://www.youtube.com/embed/" + results.items[0].id.videoId;
         });
