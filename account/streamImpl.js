@@ -12,9 +12,8 @@ function init() {
 
         // execute request
         request.execute(function (response) {
-            var results = response.result;
             console.log(search.replace(/\s/g, "+"));
-            console.log(results);
+            console.log(response);
             //$("results").append(results.items[0].id.videoId + ' ' + results.items[0].snippet.title);
         });
     });
