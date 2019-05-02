@@ -10,8 +10,8 @@ function validateLogin(username, pwd) {
         if (request.status >= 200 && request.status < 400) {
             console.log(request)
             if (data.user.length < 1) {
-                if (wrongUserElement.childNodes[2]) {
-                    wrongUserElement.removeChild(wrongUserElement.childNodes[2])
+                if (wrongUserElement.childNodes[3]) {
+                    wrongUserElement.removeChild(wrongUserElement.childNodes[3])
                 }
                 const wrongUser = document.createElement('div')
                 wrongUser.innerHTML = '<font color="red">User does not exist. Please try again</font>'
@@ -23,8 +23,8 @@ function validateLogin(username, pwd) {
                     saveUser(data.user[0])
                     window.location.href = '/se-projects/index.html'
                 } else {
-                    if (wrongPassElement.childNodes[2]) {
-                        wrongPassElement.removeChild(wrongPassElement.childNodes[2])
+                    if (wrongPassElement.childNodes[3]) {
+                        wrongPassElement.removeChild(wrongPassElement.childNodes[3])
                     }
                     const wrongPass = document.createElement('div')
                     wrongPass.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
