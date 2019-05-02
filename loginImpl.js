@@ -11,8 +11,9 @@ function validateLogin(username, pwd) {
                 saveUser(data.user[0])
                 window.location.href = '/se-projects/index.html'
             } else {
+                wrongPassElement.removeChild(wrong);
                 const wrong = document.createElement('div')
-                wrong.innerHTML = 'Password incorrect. Please try again'
+                wrong.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
 
                 wrongPassElement.appendChild(wrong)
             }
