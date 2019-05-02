@@ -29,7 +29,7 @@ function validateLogin(username, pwd) {
                     const wrongPass = document.createElement('div')
                     wrongPass.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
 
-                    wrongPassElement.appendChild(wrong)
+                    wrongPassElement.appendChild(wrongPass)
                 }
             }
         } else {
