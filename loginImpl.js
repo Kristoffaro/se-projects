@@ -10,16 +10,16 @@ function validateLogin(username, pwd) {
         if (request.status >= 200 && request.status < 400) {
             console.log(request)
             if (data.user.length < 1) {
+                if (wrongUserElement.hasChildNodes()) {
+                    wrongUserElement.removeChild(wrongUserElement.firstChild)
+                }
                 const wrongUser = document.createElement('div')
                 wrongUser.setAttribute('id', 'wrongUser')
                 wrongUser.innerHTML = '<font color="red">User does not exist. Please try again</font>'
-                if (wrongUserElement.lastChild.id === 'wrongUser') {
-                    wrongUserElement.removeChild(wrongUser)
-                }
                 wrongUserElement.appendChild(wrongUser)
             } else {
-                if (wrongUserElement.lastChild.id === 'wrongUser') {
-                    wrongUserElement.removeChild(wrongUser)
+                if (wrongUserElement.hasChildNodes()) {
+                    wrongUserElement.removeChild(wrongUserElement.firstChild)
                 }
                 wrongUserElement.appendChild(wrongUser)
                 if (data.user[0].Password === pwd) {
@@ -27,13 +27,12 @@ function validateLogin(username, pwd) {
                     saveUser(data.user[0])
                     window.location.href = '/se-projects/index.html'
                 } else {
-
+                    if (wrongPassElement.hasChildNodes()) {
+                        wrongPassElement.removeChild(wrongPassElement.firstChild)
+                    }
                     const wrongPass = document.createElement('div')
                     wrongPass.setAttribute('id', 'wrongPassword')
                     wrongPass.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
-                    if (wrongPassElement.lastChild.id === 'wrongPassword') {
-                        wrongPassElement.removeChild(wrongPass)
-                    }
                     wrongPassElement.appendChild(wrongPass)
                 }
             }
