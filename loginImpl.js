@@ -9,7 +9,7 @@ function validateLogin(username, pwd) {
         var data = JSON.parse(this.response)
         if (request.status >= 200 && request.status < 400) {
             console.log(request)
-            if (null === data.user) {
+            if (data.user.length < 1) {
                 if (wrongUserElement.childNodes[2]) {
                     wrongUserElement.removeChild(wrongUserElement.childNodes[2])
                 }
@@ -17,19 +17,20 @@ function validateLogin(username, pwd) {
                 wrong.innerHTML = '<font color="red">User does not exist. Please try again</font>'
 
                 wrongUserElement.appendChild(wrongUser)
-            }
-            if (data.user[0].Password === pwd) {
-                localStorage.setItem('loggedIn', 'true')
-                saveUser(data.user[0])
-                window.location.href = '/se-projects/index.html'
             } else {
-                if (wrongPassElement.childNodes[2]) {
-                    wrongPassElement.removeChild(wrongPassElement.childNodes[2])
-                }
-                const wrong = document.createElement('div')
-                wrong.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
+                if (data.user[0].Password === pwd) {
+                    localStorage.setItem('loggedIn', 'true')
+                    saveUser(data.user[0])
+                    window.location.href = '/se-projects/index.html'
+                } else {
+                    if (wrongPassElement.childNodes[2]) {
+                        wrongPassElement.removeChild(wrongPassElement.childNodes[2])
+                    }
+                    const wrong = document.createElement('div')
+                    wrong.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
 
-                wrongPassElement.appendChild(wrong)
+                    wrongPassElement.appendChild(wrong)
+                }
             }
         } else {
             console.log('Error')
