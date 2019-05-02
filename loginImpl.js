@@ -13,7 +13,7 @@ function validateLogin(username, pwd) {
                 const wrongUser = document.createElement('div')
                 wrongUser.setAttribute('id', 'wrongUser')
                 wrongUser.innerHTML = '<font color="red">User does not exist. Please try again</font>'
-                if (wrongUserElement.lastChild().id === 'wrongUser') {
+                if (wrongUserElement.lastChild.id === 'wrongUser') {
                     wrongUserElement.removeChild(wrongUser)
                 }
                 wrongUserElement.appendChild(wrongUser)
@@ -27,7 +27,7 @@ function validateLogin(username, pwd) {
                     const wrongPass = document.createElement('div')
                     wrongPass.setAttribute('id', 'wrongPassword')
                     wrongPass.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
-                    if (wrongPassElement.lastChild().id === 'wrongPassword') {
+                    if (wrongPassElement.lastChild.id === 'wrongPassword') {
                         wrongPassElement.removeChild(wrongPass)
                     }
                     wrongPassElement.appendChild(wrongPass)
