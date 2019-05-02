@@ -21,7 +21,6 @@ function validateLogin(username, pwd) {
                 if (wrongUserElement.hasChildNodes()) {
                     wrongUserElement.removeChild(wrongUserElement.firstChild)
                 }
-                wrongUserElement.appendChild(wrongUser)
                 if (data.user[0].Password === pwd) {
                     localStorage.setItem('loggedIn', 'true')
                     saveUser(data.user[0])
