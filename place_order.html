@@ -29,13 +29,12 @@
           <div class="form-group">
             <span class="gray">Billing address </span> <a href="#edit_add" class="dashed" data-toggle="collapse">
               edit</a>
-            <br> User billing address
+            <br> <script>document.write(url_query('cardAdd1'))</script>
           </div>
           <div id="edit_add" class="collapse">
             <form action="#">
               <div class="form-group">
-                <input type="text" class="form-control my-2" id="cardAdd1" placeholder="address line 1" name="cardAdd1">
-                <input type="text" class="form-control my-2" id="cardAdd2" placeholder="address line 2" name="cardAdd2">
+                <input type="text" class="form-control my-2" id="cardAdd1" placeholder="address" name="cardAdd1" required="required" pattern="[A-Za-z0-9]{1,50}">
               </div>
               <input type="button" class="btn btn-primary" value="Save Changes">
               <input type="reset" class="btn btn-default" value="Cancel">
@@ -47,7 +46,7 @@
           <div class="form-group">
             <span class="gray">Payment method </span> <a href="#edit_card" class="dashed" data-toggle="collapse">
               edit</a>
-            <br> User credit card
+            <br> <script>document.write(url_query('cardType'))</script>
           </div>
           <div id="edit_card" class="collapse">
             <form action="#">
@@ -60,18 +59,18 @@
               <label for="discover">Discover</label>
               <div class="form-group">
                 <label for="cardname">Name on card:</label>
-                <input type="text" class="form-control" id="cardname" placeholder="Enter name" name="cardname">
+                <input type="text" class="form-control" id="cardname" placeholder="Enter name" name="cardname" required="required" pattern="[A-Za-z0-9]{1,30}">
               </div>
               <div class="form-group">
                 <label for="cardnum">Card number:</label>
-                <input type="text" class="form-control" id="cardnum" placeholder="Enter card number" name="cardnum">
+                <input type="text" class="form-control" id="cardnum" placeholder="Enter card number" name="cardnum" required="required" pattern="[0-9]{13,19}">
               </div>
               <div class="form-group">
                 <label for="valid">Valid thru</label>
-                <input type="text" maxlength="5" size="3" placeholder="mm/yy" id="valid" name="valid">
+                <input type="text" maxlength="5" size="3" placeholder="mm/yy" id="valid" name="valid" required="required" pattern="^(0[1-9]|1[0-2])\/?(([0-9]{4}|[0-9]{2})$)">
                 &nbsp;&nbsp;&nbsp;
                 <label for="valid">CVV</label>
-                <input type="text" maxlength="3" size="1" placeholder="***" id="cvv" name="cvv">
+                <input type="text" maxlength="3" size="1" placeholder="***" id="cvv" name="cvv" required="required" pattern="[0-9]{1,3}">
               </div>
               <div class="form-group form-check">
                 <label class="form-check-label">
