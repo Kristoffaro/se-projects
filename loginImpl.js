@@ -14,7 +14,7 @@ function validateLogin(username, pwd) {
                     wrongUserElement.removeChild(wrongUserElement.childNodes[2])
                 }
                 const wrongUser = document.createElement('div')
-                wrong.innerHTML = '<font color="red">User does not exist. Please try again</font>'
+                wrongUser.innerHTML = '<font color="red">User does not exist. Please try again</font>'
 
                 wrongUserElement.appendChild(wrongUser)
             } else {
@@ -26,8 +26,8 @@ function validateLogin(username, pwd) {
                     if (wrongPassElement.childNodes[2]) {
                         wrongPassElement.removeChild(wrongPassElement.childNodes[2])
                     }
-                    const wrong = document.createElement('div')
-                    wrong.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
+                    const wrongPass = document.createElement('div')
+                    wrongPass.innerHTML = '<font color="red">Password incorrect. Please try again</font>'
 
                     wrongPassElement.appendChild(wrong)
                 }
