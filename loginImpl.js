@@ -18,6 +18,10 @@ function validateLogin(username, pwd) {
                 }
                 wrongUserElement.appendChild(wrongUser)
             } else {
+                if (wrongUserElement.lastChild.id === 'wrongUser') {
+                    wrongUserElement.removeChild(wrongUser)
+                }
+                wrongUserElement.appendChild(wrongUser)
                 if (data.user[0].Password === pwd) {
                     localStorage.setItem('loggedIn', 'true')
                     saveUser(data.user[0])
