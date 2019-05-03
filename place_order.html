@@ -102,7 +102,7 @@
         </div>
       </div>
       <script>
-        document.getElementById('cardname').setAttribute('placeholder', url_query('cardname'))
+        document.getElementById('cardname').setAttribute('placeholder', url_query('cardname').replace(new RegExp("\\+","g"),' '))
         document.getElementById('cardnum').setAttribute('placeholder', url_query('cardnum'))
         document.getElementById('valid').setAttribute('placeholder', url_query('valid'))
         document.getElementById('cvv').setAttribute('placeholder', url_query('cvv'))
