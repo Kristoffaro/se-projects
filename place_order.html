@@ -104,7 +104,7 @@
       <script>
         document.getElementById('cardname').setAttribute('placeholder', url_query('cardname').replace(new RegExp("\\+","g"),' '))
         document.getElementById('cardnum').setAttribute('placeholder', url_query('cardnum'))
-        document.getElementById('valid').setAttribute('placeholder', url_query('valid'))
+        document.getElementById('valid').setAttribute('placeholder', url_query('valid').replace('%2F', '/'))
         document.getElementById('cvv').setAttribute('placeholder', url_query('cvv'))
         document.getElementById('cardAdd1').setAttribute('placeholder', url_query('cardAdd1').replace(new RegExp("\\+","g"),' '))
         if (url_query('cardType') === 'mc') {
