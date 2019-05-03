@@ -47,34 +47,34 @@
           <div class="col-sm-8">
             <div class="form-group form-inline">
               <label for="query" class="col-sm-3">Movie Title:</label>
-              <input type="text" class="form-control m-2 col-sm-6" id="query" placeholder="" name="query">
+              <input type="text" class="form-control m-2 col-sm-6" id="query" name="query">
             </div>
             <div class="form-group form-inline">
               <label for="actor" class="col-sm-3">Actor:</label>
-              <input type="text" class="form-control m-2 col-sm-6" id="actor" placeholder="" name="actor">
+              <input type="text" class="form-control m-2 col-sm-6" id="actor" name="actor">
             </div>
             <div class="form-group form-inline">
               <label for="director" class="col-sm-3">Director:</label>
-              <input type="text" class="form-control m-2 col-sm-6" id="director" placeholder="" name="director">
+              <input type="text" class="form-control m-2 col-sm-6" id="director" name="director">
             </div>
             <div class="form-group form-inline ">
               <label for="genre" class="col-sm-3">Genre / Theme: </label>
-              <input type="text" class="form-control m-2 col-sm-6" id="genre" placeholder="" name="genre">
+              <input type="text" class="form-control m-2 col-sm-6" id="genre" name="genre">
             </div>
           </div>
 
           <div class="col-sm-4">
             <div class="form-group form-inline ">
               <label for="decade">Decade:&nbsp;&nbsp;</label>
-              <input type="text" class="form-control m-2 col-sm-3" id="decade" placeholder="1980" name="decade">
+              <input type="text" class="form-control m-2 col-sm-3" id="decade" placeholder="2000" name="decade">
             </div>
             <div class="form-group form-inline ">
               <label for="reviews">Reviews:&nbsp;</label>
-              <input type="number" class="form-control m-2 col-sm-3" id="reviews" placeholder="" name="reviews">
+              <input type="number" class="form-control m-2 col-sm-3" id="reviews"name="reviews">
             </div>
             <div class="form-group form-inline ">
               <label for="price">Max Price:</label>
-              <input type="number" class="form-control m-2 col-sm-3" id="price" placeholder="" name="price">
+              <input type="number" class="form-control m-2 col-sm-3" id="price" name="price">
             </div>
             <div class="form-group form-check"></div>
             <button type="submit" class="btn btn-primary my-2">Search</button>
@@ -91,18 +91,25 @@
     <script>
       if (url_query('query').length > 0) {
         getMovies(url_query('query'), 'query');
+        document.getElementById('query').placeholder = toTitleCase(url_query('query'));
       } else if (url_query('actor').length > 0) {
         getMovies(url_query('actor'), 'actor');
+        document.getElementById('actor').placeholder = toTitleCase(url_query('actor'));
       } else if (url_query('director').length > 0) {
         getMovies(url_query('director'), 'director');
+        document.getElementById('director').placeholder = toTitleCase(url_query('director'));
       } else if (url_query('genre').length > 0) {
         getMovies(url_query('genre'), 'genre');
+        document.getElementById('genre').placeholder = toTitleCase(url_query('genre'));
       } else if (url_query('decade').length > 0) {
         getMovies(url_query('decade'), 'decade');
+        document.getElementById('decade').placeholder = toTitleCase(url_query('decade'));
       } else if (url_query('reviews').length > 0) {
         getMovies(url_query('reviews'), 'reviews');
+        document.getElementById('reviews').placeholder = toTitleCase(url_query('reviews'));
       } else if (url_query('price').length > 0) {
         getMovies(url_query('price'), 'price');
+        document.getElementById('price').placeholder = toTitleCase(url_query('price'));
       }
     </script>
 
