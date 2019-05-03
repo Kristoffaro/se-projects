@@ -62,7 +62,7 @@
               streamButton.innerText = 'Stream Now'
               streamButton.setAttribute('formaction', '/se-projects/account/stream.html')
               buttons.appendChild(streamButton)
-            } else {
+            } else if (loggedIn === 'true'){
               const rentButton = document.createElement('BUTTON')
               rentButton.setAttribute('class', 'btn btn-danger buy')
               rentButton.setAttribute('type', 'submit')
@@ -79,6 +79,13 @@
               buyButton.innerText = 'Buy for $' + movieBuy
               buyButton.setAttribute('formaction', '/se-projects/checkout.html')
               buttons.appendChild(buyButton)
+            } else {
+              const logButton = document.createElement('BUTTON')
+              logButton.setAttribute('class', 'btn btn-danger buy')
+              logButton.setAttribute('type', 'submit')
+              logButton.innerText = 'Log In'
+              logButton.setAttribute('formaction', '/se-projects/login.html')
+              buttons.appendChild(logButton)
             }
           </script>
         </form>
