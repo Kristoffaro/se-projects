@@ -36,7 +36,7 @@ a.dashed:hover {text-decoration: none; color:#000;}
 
 .stream {margin:20px 0}
 .stream button {margin-left:20px}
-.gray  {color:#FF0000; font-weight: bold;}
+.gray  {color:#666; font-weight: bold;}
 
 .search {color:#464646;}
 .pagination li.active a.page-link {background-color: #069;}
