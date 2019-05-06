@@ -47,7 +47,7 @@ a.dashed:hover {text-decoration: none; color:#000;}
   bottom: 0;    
   position: relative;
   width: -webkit-fill-available; 
-}
+} 
 
 #footer li a, a:visited {color: #464646;}
 #footer li a:hover {color: #000; text-decoration: none;}
