@@ -46,7 +46,7 @@ a.dashed:hover {text-decoration: none; color:#000;}
   padding:10px 0 20px 0;
   bottom: 0;    
   position: relative;
-  width: -webkit-fill-available; 
+  width: 100% 
 } 
 
 #footer li a, a:visited {color: #464646;}
